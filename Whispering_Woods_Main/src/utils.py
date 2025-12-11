@@ -2,9 +2,11 @@
 Utility functions for the game
 """
 
-import time
+import os
 import sys
+import time
 import random
+import textwrap
 from typing import Optional
 from .colors import Colors, colored_text
 
@@ -26,7 +28,6 @@ def instant_print(text: str):
 
 def clear_screen():
     """Clear the screen."""
-    import os
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -129,7 +130,6 @@ def display_separator(char: str = "=", length: int = 60, color: str = Colors.CYA
 
 def wrap_text(text: str, width: int = 70) -> str:
     """Wrap text to a specific width."""
-    import textwrap
     return textwrap.fill(text, width=width)
 
 

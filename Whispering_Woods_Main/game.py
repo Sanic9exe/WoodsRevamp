@@ -21,6 +21,7 @@ import sys
 import json
 import random
 import time
+import traceback
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -710,7 +711,6 @@ def main():
         
     except Exception as e:
         instant_print(colored_text(f"\nCritical error: {e}", Colors.RED))
-        import traceback
         traceback.print_exc()
 
 
