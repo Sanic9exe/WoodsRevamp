@@ -1,0 +1,422 @@
+{
+  "health_potion": {
+    "id": "health_potion",
+    "name": "Health Potion",
+    "type": "consumable",
+    "description": "A red potion that restores health",
+    "effect": {"heal": 50},
+    "value": 25,
+    "weight": 0.5
+  },
+  "mana_potion": {
+    "id": "mana_potion",
+    "name": "Mana Potion",
+    "type": "consumable",
+    "description": "A blue potion that restores magical energy",
+    "effect": {"mana": 30},
+    "value": 20,
+    "weight": 0.5
+  },
+  "antidote": {
+    "id": "antidote",
+    "name": "Antidote",
+    "type": "consumable",
+    "description": "Cures poison",
+    "effect": {"cure_poison": true},
+    "value": 30,
+    "weight": 0.3
+  },
+  "torch": {
+    "id": "torch",
+    "name": "Torch",
+    "type": "tool",
+    "description": "Provides light in dark places",
+    "effect": {"light": true},
+    "value": 5,
+    "weight": 1.0
+  },
+  "rope": {
+    "id": "rope",
+    "name": "Rope",
+    "type": "tool",
+    "description": "50 feet of sturdy rope",
+    "effect": {"climbing": true},
+    "value": 10,
+    "weight": 2.0
+  },
+  "lockpick": {
+    "id": "lockpick",
+    "name": "Lockpick Set",
+    "type": "tool",
+    "description": "Tools for picking locks",
+    "effect": {"lockpicking": true},
+    "value": 40,
+    "weight": 0.5
+  },
+  "compass": {
+    "id": "compass",
+    "name": "Compass",
+    "type": "tool",
+    "description": "Never lose your way",
+    "effect": {"navigation": true},
+    "value": 30,
+    "weight": 0.3
+  },
+  "map": {
+    "id": "map",
+    "name": "Forest Map",
+    "type": "tool",
+    "description": "A detailed map of the Whispering Woods",
+    "effect": {"reveal_locations": true},
+    "value": 50,
+    "weight": 0.2
+  },
+  "iron_sword": {
+    "id": "iron_sword",
+    "name": "Iron Sword",
+    "type": "weapon",
+    "description": "A basic but reliable blade",
+    "damage": 15,
+    "value": 50,
+    "weight": 3.0
+  },
+  "steel_sword": {
+    "id": "steel_sword",
+    "name": "Steel Sword",
+    "type": "weapon",
+    "description": "A well-crafted steel blade",
+    "damage": 25,
+    "value": 150,
+    "weight": 3.5
+  },
+  "bow": {
+    "id": "bow",
+    "name": "Hunting Bow",
+    "type": "weapon",
+    "description": "A sturdy bow for hunting",
+    "damage": 18,
+    "value": 80,
+    "weight": 2.0,
+    "requires": "arrows"
+  },
+  "dagger": {
+    "id": "dagger",
+    "name": "Dagger",
+    "type": "weapon",
+    "description": "A small, concealable blade",
+    "damage": 10,
+    "value": 25,
+    "weight": 0.8
+  },
+  "battleaxe": {
+    "id": "battleaxe",
+    "name": "Battle Axe",
+    "type": "weapon",
+    "description": "A heavy two-handed axe",
+    "damage": 35,
+    "value": 200,
+    "weight": 6.0
+  },
+  "leather_armor": {
+    "id": "leather_armor",
+    "name": "Leather Armor",
+    "type": "armor",
+    "description": "Light leather protection",
+    "defense": 10,
+    "value": 40,
+    "weight": 5.0
+  },
+  "chainmail": {
+    "id": "chainmail",
+    "name": "Chainmail Armor",
+    "type": "armor",
+    "description": "Interlocking metal rings",
+    "defense": 20,
+    "value": 120,
+    "weight": 15.0
+  },
+  "plate_armor": {
+    "id": "plate_armor",
+    "name": "Plate Armor",
+    "type": "armor",
+    "description": "Full plate armor protection",
+    "defense": 35,
+    "value": 300,
+    "weight": 25.0
+  },
+  "shield": {
+    "id": "shield",
+    "name": "Wooden Shield",
+    "type": "armor",
+    "description": "A basic wooden shield",
+    "defense": 8,
+    "value": 30,
+    "weight": 4.0
+  },
+  "iron_shield": {
+    "id": "iron_shield",
+    "name": "Iron Shield",
+    "type": "armor",
+    "description": "A sturdy iron shield",
+    "defense": 15,
+    "value": 80,
+    "weight": 6.0
+  },
+  "wild_berries": {
+    "id": "wild_berries",
+    "name": "Wild Berries",
+    "type": "food",
+    "description": "Fresh berries from the forest",
+    "effect": {"heal": 10},
+    "value": 5,
+    "weight": 0.2
+  },
+  "cooked_meat": {
+    "id": "cooked_meat",
+    "name": "Cooked Meat",
+    "type": "food",
+    "description": "Freshly cooked game meat",
+    "effect": {"heal": 25, "stamina": 20},
+    "value": 15,
+    "weight": 0.8
+  },
+  "bread": {
+    "id": "bread",
+    "name": "Fresh Bread",
+    "type": "food",
+    "description": "Warm, freshly baked bread",
+    "effect": {"heal": 15},
+    "value": 8,
+    "weight": 0.5
+  },
+  "mushroom": {
+    "id": "mushroom",
+    "name": "Forest Mushroom",
+    "type": "ingredient",
+    "description": "A mushroom with healing properties",
+    "value": 10,
+    "weight": 0.1
+  },
+  "herb": {
+    "id": "herb",
+    "name": "Healing Herb",
+    "type": "ingredient",
+    "description": "A common healing herb",
+    "value": 8,
+    "weight": 0.1
+  },
+  "rare_herb": {
+    "id": "rare_herb",
+    "name": "Rare Healing Herb",
+    "type": "ingredient",
+    "description": "A powerful medicinal herb",
+    "value": 50,
+    "weight": 0.1
+  },
+  "iron_ore": {
+    "id": "iron_ore",
+    "name": "Iron Ore",
+    "type": "material",
+    "description": "Raw iron ore for smithing",
+    "value": 15,
+    "weight": 2.0
+  },
+  "silver_ore": {
+    "id": "silver_ore",
+    "name": "Silver Ore",
+    "type": "material",
+    "description": "Precious silver ore",
+    "value": 40,
+    "weight": 1.5
+  },
+  "gold_ore": {
+    "id": "gold_ore",
+    "name": "Gold Ore",
+    "type": "material",
+    "description": "Valuable gold ore",
+    "value": 100,
+    "weight": 1.5
+  },
+  "wood": {
+    "id": "wood",
+    "name": "Timber",
+    "type": "material",
+    "description": "Quality wood for crafting",
+    "value": 5,
+    "weight": 3.0
+  },
+  "stone": {
+    "id": "stone",
+    "name": "Stone",
+    "type": "material",
+    "description": "A chunk of solid stone",
+    "value": 2,
+    "weight": 5.0
+  },
+  "leather": {
+    "id": "leather",
+    "name": "Leather",
+    "type": "material",
+    "description": "Tanned leather for crafting",
+    "value": 12,
+    "weight": 1.0
+  },
+  "wolf_pelt": {
+    "id": "wolf_pelt",
+    "name": "Wolf Pelt",
+    "type": "material",
+    "description": "A thick wolf pelt",
+    "value": 25,
+    "weight": 2.0
+  },
+  "bear_pelt": {
+    "id": "bear_pelt",
+    "name": "Bear Pelt",
+    "type": "material",
+    "description": "A massive bear pelt",
+    "value": 60,
+    "weight": 5.0
+  },
+  "gem": {
+    "id": "gem",
+    "name": "Precious Gem",
+    "type": "treasure",
+    "description": "A beautiful gemstone",
+    "value": 150,
+    "weight": 0.1
+  },
+  "ancient_coin": {
+    "id": "ancient_coin",
+    "name": "Ancient Coin",
+    "type": "treasure",
+    "description": "A coin from a lost civilization",
+    "value": 50,
+    "weight": 0.1
+  },
+  "ancient_amulet": {
+    "id": "ancient_amulet",
+    "name": "Ancient Amulet",
+    "type": "artifact",
+    "description": "An amulet with mysterious powers",
+    "effect": {"magic_resistance": 10},
+    "value": 200,
+    "weight": 0.3
+  },
+  "magic_ring": {
+    "id": "magic_ring",
+    "name": "Ring of Protection",
+    "type": "artifact",
+    "description": "A ring that protects the wearer",
+    "effect": {"defense_bonus": 5},
+    "value": 150,
+    "weight": 0.1
+  },
+  "crystal_shard": {
+    "id": "crystal_shard",
+    "name": "Crystal Shard",
+    "type": "magic",
+    "description": "A shard of pure magical crystal",
+    "value": 80,
+    "weight": 0.5
+  },
+  "spell_scroll": {
+    "id": "spell_scroll",
+    "name": "Spell Scroll",
+    "type": "magic",
+    "description": "A scroll containing a single spell",
+    "effect": {"cast_spell": true},
+    "value": 100,
+    "weight": 0.2
+  },
+  "poison": {
+    "id": "poison",
+    "name": "Poison Vial",
+    "type": "consumable",
+    "description": "A deadly poison",
+    "effect": {"apply_poison": true},
+    "value": 60,
+    "weight": 0.2
+  },
+  "smoke_bomb": {
+    "id": "smoke_bomb",
+    "name": "Smoke Bomb",
+    "type": "consumable",
+    "description": "Creates a cloud of smoke for escape",
+    "effect": {"escape": true},
+    "value": 35,
+    "weight": 0.3
+  },
+  "holy_water": {
+    "id": "holy_water",
+    "name": "Holy Water",
+    "type": "consumable",
+    "description": "Blessed water that harms undead",
+    "effect": {"holy_damage": 30},
+    "value": 40,
+    "weight": 0.5
+  },
+  "fishing_rod": {
+    "id": "fishing_rod",
+    "name": "Fishing Rod",
+    "type": "tool",
+    "description": "For catching fish",
+    "effect": {"fishing": true},
+    "value": 20,
+    "weight": 2.0
+  },
+  "pickaxe": {
+    "id": "pickaxe",
+    "name": "Pickaxe",
+    "type": "tool",
+    "description": "For mining ore",
+    "effect": {"mining": true},
+    "value": 35,
+    "weight": 4.0
+  },
+  "axe": {
+    "id": "axe",
+    "name": "Woodcutter's Axe",
+    "type": "tool",
+    "description": "For chopping wood",
+    "effect": {"woodcutting": true},
+    "damage": 12,
+    "value": 25,
+    "weight": 3.0
+  },
+  "lantern": {
+    "id": "lantern",
+    "name": "Lantern",
+    "type": "tool",
+    "description": "A more reliable light source than torches",
+    "effect": {"light": true, "duration": "long"},
+    "value": 40,
+    "weight": 1.5
+  },
+  "tent": {
+    "id": "tent",
+    "name": "Travel Tent",
+    "type": "tool",
+    "description": "Portable shelter for resting",
+    "effect": {"camping": true},
+    "value": 50,
+    "weight": 5.0
+  },
+  "bedroll": {
+    "id": "bedroll",
+    "name": "Bedroll",
+    "type": "tool",
+    "description": "For comfortable rest",
+    "effect": {"rest_bonus": 10},
+    "value": 15,
+    "weight": 2.0
+  },
+  "backpack": {
+    "id": "backpack",
+    "name": "Large Backpack",
+    "type": "equipment",
+    "description": "Increases carrying capacity",
+    "effect": {"carry_capacity": 20},
+    "value": 45,
+    "weight": 2.0
+  }
+}
