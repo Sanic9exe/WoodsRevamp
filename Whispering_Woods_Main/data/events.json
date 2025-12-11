@@ -1,0 +1,87 @@
+{
+  "found_treasure": {
+    "id": "found_treasure",
+    "name": "Hidden Treasure",
+    "type": "positive",
+    "description": "You stumble upon a hidden cache of treasure!",
+    "effects": {
+      "gold": 50,
+      "items": ["gem"]
+    },
+    "chance": 0.05
+  },
+  "ambush": {
+    "id": "ambush",
+    "name": "Ambush!",
+    "type": "combat",
+    "description": "You've walked into an ambush!",
+    "effects": {
+      "spawn_creatures": ["bandit", "bandit"]
+    },
+    "chance": 0.15
+  },
+  "helpful_stranger": {
+    "id": "helpful_stranger",
+    "name": "Helpful Stranger",
+    "type": "positive",
+    "description": "A friendly traveler offers you supplies.",
+    "effects": {
+      "items": ["health_potion", "bread"]
+    },
+    "chance": 0.08
+  },
+  "mysterious_merchant": {
+    "id": "mysterious_merchant",
+    "name": "Mysterious Merchant",
+    "type": "trading",
+    "description": "A strange merchant appears offering rare goods.",
+    "effects": {
+      "open_shop": "special_merchant"
+    },
+    "chance": 0.06
+  },
+  "ancient_shrine": {
+    "id": "ancient_shrine",
+    "name": "Ancient Shrine",
+    "type": "blessing",
+    "description": "You discover an ancient shrine emanating holy energy.",
+    "effects": {
+      "heal": 50,
+      "buff": "blessed"
+    },
+    "chance": 0.04
+  },
+  "poisonous_plants": {
+    "id": "poisonous_plants",
+    "name": "Poisonous Plants",
+    "type": "negative",
+    "description": "You accidentally brush against poisonous plants!",
+    "effects": {
+      "status": "poisoned",
+      "damage": 10
+    },
+    "chance": 0.10
+  },
+  "lost_journal": {
+    "id": "lost_journal",
+    "name": "Lost Journal",
+    "type": "lore",
+    "description": "You find a weathered journal containing valuable information.",
+    "effects": {
+      "lore": "random",
+      "xp": 25
+    },
+    "chance": 0.07
+  },
+  "fairy_blessing": {
+    "id": "fairy_blessing",
+    "name": "Fairy Blessing",
+    "type": "magical",
+    "description": "Forest fairies bestow a blessing upon you.",
+    "effects": {
+      "buff": "fairy_blessed",
+      "luck": 10
+    },
+    "chance": 0.03
+  }
+}

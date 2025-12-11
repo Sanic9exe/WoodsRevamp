@@ -84,6 +84,10 @@ class DataLoader:
         """Load lore entries from lore.json."""
         return self.load_json("lore.json")
     
+    def load_companions(self) -> Dict[str, Any]:
+        """Load companion data from companions.json."""
+        return self.load_json("companions.json")
+    
     def load_all(self) -> Dict[str, Dict[str, Any]]:
         """Load all game data at once."""
         return {
@@ -91,6 +95,7 @@ class DataLoader:
             'items': self.load_items(),
             'creatures': self.load_creatures(),
             'locations': self.load_locations(),
+            'companions': self.load_companions(),
             'quests': self.load_quests(),
             'crafting': self.load_crafting_recipes(),
             'achievements': self.load_achievements(),
