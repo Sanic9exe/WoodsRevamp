@@ -173,7 +173,6 @@ class Player:
         """Heal the player and return actual amount healed."""
         healed = min(amount, self.stats.max_health - self.stats.health)
         self.stats.health += healed
-        self.total_damage_dealt += healed
         return healed
     
     def restore_stamina(self, amount: int) -> int:

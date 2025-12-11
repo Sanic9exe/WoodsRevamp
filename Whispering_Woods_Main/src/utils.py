@@ -5,6 +5,7 @@ Utility functions for the game
 import time
 import sys
 import random
+from typing import Optional
 from .colors import Colors, colored_text
 
 
@@ -51,7 +52,7 @@ def get_number_input(prompt: str, min_val: int = None, max_val: int = None) -> O
             return number
         except ValueError:
             instant_print(colored_text("Please enter a valid number.", Colors.RED))
-            return None
+            continue
 
 
 def roll_dice(sides: int = 6, num_dice: int = 1) -> int:
@@ -135,6 +136,3 @@ def wrap_text(text: str, width: int = 70) -> str:
 def pause(duration: float):
     """Pause for a specified duration."""
     time.sleep(duration)
-
-
-from typing import Optional
