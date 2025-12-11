@@ -1,0 +1,265 @@
+{
+  "health_potion": {
+    "id": "health_potion",
+    "name": "Health Potion",
+    "result": "health_potion",
+    "result_count": 1,
+    "ingredients": {
+      "herb": 2,
+      "wild_berries": 1,
+      "fresh_water": 1
+    },
+    "skill_required": 0,
+    "category": "alchemy"
+  },
+  "mana_potion": {
+    "id": "mana_potion",
+    "name": "Mana Potion",
+    "result": "mana_potion",
+    "result_count": 1,
+    "ingredients": {
+      "mushroom": 2,
+      "crystal_shard": 1,
+      "fresh_water": 1
+    },
+    "skill_required": 5,
+    "category": "alchemy"
+  },
+  "iron_sword": {
+    "id": "iron_sword",
+    "name": "Iron Sword",
+    "result": "iron_sword",
+    "result_count": 1,
+    "ingredients": {
+      "iron_ore": 3,
+      "wood": 1
+    },
+    "skill_required": 10,
+    "requires_forge": true,
+    "category": "smithing"
+  },
+  "steel_sword": {
+    "id": "steel_sword",
+    "name": "Steel Sword",
+    "result": "steel_sword",
+    "result_count": 1,
+    "ingredients": {
+      "iron_ore": 5,
+      "coal": 2,
+      "wood": 1
+    },
+    "skill_required": 25,
+    "requires_forge": true,
+    "category": "smithing"
+  },
+  "leather_armor": {
+    "id": "leather_armor",
+    "name": "Leather Armor",
+    "result": "leather_armor",
+    "result_count": 1,
+    "ingredients": {
+      "leather": 4,
+      "thread": 2
+    },
+    "skill_required": 8,
+    "category": "leatherworking"
+  },
+  "chainmail": {
+    "id": "chainmail",
+    "name": "Chainmail Armor",
+    "result": "chainmail",
+    "result_count": 1,
+    "ingredients": {
+      "iron_ore": 8,
+      "leather": 2
+    },
+    "skill_required": 30,
+    "requires_forge": true,
+    "category": "smithing"
+  },
+  "bow": {
+    "id": "bow",
+    "name": "Hunting Bow",
+    "result": "bow",
+    "result_count": 1,
+    "ingredients": {
+      "wood": 3,
+      "rope": 1
+    },
+    "skill_required": 12,
+    "category": "woodworking"
+  },
+  "arrows": {
+    "id": "arrows",
+    "name": "Arrows",
+    "result": "arrows",
+    "result_count": 10,
+    "ingredients": {
+      "wood": 1,
+      "feather": 3,
+      "stone": 1
+    },
+    "skill_required": 5,
+    "category": "woodworking"
+  },
+  "torch": {
+    "id": "torch",
+    "name": "Torch",
+    "result": "torch",
+    "result_count": 3,
+    "ingredients": {
+      "wood": 1,
+      "cloth": 1,
+      "oil": 1
+    },
+    "skill_required": 0,
+    "category": "basic"
+  },
+  "antidote": {
+    "id": "antidote",
+    "name": "Antidote",
+    "result": "antidote",
+    "result_count": 1,
+    "ingredients": {
+      "rare_herb": 1,
+      "mushroom": 1,
+      "fresh_water": 1
+    },
+    "skill_required": 15,
+    "category": "alchemy"
+  },
+  "poison": {
+    "id": "poison",
+    "name": "Poison Vial",
+    "result": "poison",
+    "result_count": 1,
+    "ingredients": {
+      "venom_sac": 1,
+      "toxic_mushroom": 2,
+      "alcohol": 1
+    },
+    "skill_required": 20,
+    "category": "alchemy"
+  },
+  "smoke_bomb": {
+    "id": "smoke_bomb",
+    "name": "Smoke Bomb",
+    "result": "smoke_bomb",
+    "result_count": 1,
+    "ingredients": {
+      "sulfur": 2,
+      "charcoal": 1,
+      "cloth": 1
+    },
+    "skill_required": 18,
+    "category": "alchemy"
+  },
+  "holy_water": {
+    "id": "holy_water",
+    "name": "Holy Water",
+    "result": "holy_water",
+    "result_count": 1,
+    "ingredients": {
+      "fresh_water": 1,
+      "holy_symbol": 1,
+      "silver_dust": 1
+    },
+    "skill_required": 10,
+    "requires_chapel": true,
+    "category": "divine"
+  },
+  "healing_salve": {
+    "id": "healing_salve",
+    "name": "Healing Salve",
+    "result": "healing_salve",
+    "result_count": 1,
+    "ingredients": {
+      "herb": 3,
+      "oil": 1,
+      "beeswax": 1
+    },
+    "skill_required": 8,
+    "category": "alchemy"
+  },
+  "lockpick": {
+    "id": "lockpick",
+    "name": "Lockpick Set",
+    "result": "lockpick",
+    "result_count": 1,
+    "ingredients": {
+      "iron_ore": 1,
+      "file": 1
+    },
+    "skill_required": 15,
+    "category": "tools"
+  },
+  "trap": {
+    "id": "trap",
+    "name": "Bear Trap",
+    "result": "trap",
+    "result_count": 1,
+    "ingredients": {
+      "iron_ore": 4,
+      "spring": 2,
+      "chain": 1
+    },
+    "skill_required": 20,
+    "requires_forge": true,
+    "category": "tools"
+  },
+  "enhanced_health_potion": {
+    "id": "enhanced_health_potion",
+    "name": "Enhanced Health Potion",
+    "result": "enhanced_health_potion",
+    "result_count": 1,
+    "ingredients": {
+      "health_potion": 1,
+      "rare_herb": 1,
+      "crystal_shard": 1
+    },
+    "skill_required": 30,
+    "category": "alchemy"
+  },
+  "legendary_sword": {
+    "id": "legendary_sword",
+    "name": "Legendary Sword",
+    "result": "legendary_sword",
+    "result_count": 1,
+    "ingredients": {
+      "steel_sword": 1,
+      "dragon_scale": 2,
+      "magic_crystal": 1,
+      "ancient_metal": 3
+    },
+    "skill_required": 50,
+    "requires_forge": true,
+    "requires_quest": "forge_legendary_weapon",
+    "category": "smithing"
+  },
+  "magic_ring": {
+    "id": "magic_ring",
+    "name": "Ring of Protection",
+    "result": "magic_ring",
+    "result_count": 1,
+    "ingredients": {
+      "gold_ore": 1,
+      "gem": 1,
+      "magic_essence": 1
+    },
+    "skill_required": 35,
+    "category": "enchanting"
+  },
+  "tent": {
+    "id": "tent",
+    "name": "Travel Tent",
+    "result": "tent",
+    "result_count": 1,
+    "ingredients": {
+      "cloth": 8,
+      "rope": 2,
+      "wood": 4
+    },
+    "skill_required": 10,
+    "category": "survival"
+  }
+}

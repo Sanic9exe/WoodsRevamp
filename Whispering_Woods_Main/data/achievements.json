@@ -1,0 +1,181 @@
+{
+  "first_steps": {
+    "id": "first_steps",
+    "name": "First Steps",
+    "description": "Begin your journey in the Whispering Woods",
+    "type": "progress",
+    "points": 10,
+    "hidden": false
+  },
+  "explorer": {
+    "id": "explorer",
+    "name": "Explorer",
+    "description": "Discover 10 unique locations",
+    "type": "exploration",
+    "requirement": {"locations_discovered": 10},
+    "points": 25,
+    "hidden": false
+  },
+  "master_explorer": {
+    "id": "master_explorer",
+    "name": "Master Explorer",
+    "description": "Discover all locations in the Whispering Woods",
+    "type": "exploration",
+    "requirement": {"locations_discovered": "all"},
+    "points": 100,
+    "hidden": false
+  },
+  "beast_slayer": {
+    "id": "beast_slayer",
+    "name": "Beast Slayer",
+    "description": "Defeat 50 creatures",
+    "type": "combat",
+    "requirement": {"creatures_killed": 50},
+    "points": 30,
+    "hidden": false
+  },
+  "legendary_hunter": {
+    "id": "legendary_hunter",
+    "name": "Legendary Hunter",
+    "description": "Defeat all legendary creatures",
+    "type": "combat",
+    "requirement": {"legendary_kills": "all"},
+    "points": 150,
+    "hidden": true
+  },
+  "master_crafter": {
+    "id": "master_crafter",
+    "name": "Master Crafter",
+    "description": "Craft 50 items",
+    "type": "crafting",
+    "requirement": {"items_crafted": 50},
+    "points": 40,
+    "hidden": false
+  },
+  "treasure_hunter": {
+    "id": "treasure_hunter",
+    "name": "Treasure Hunter",
+    "description": "Collect 10,000 gold",
+    "type": "wealth",
+    "requirement": {"gold_earned": 10000},
+    "points": 50,
+    "hidden": false
+  },
+  "friend_of_the_forest": {
+    "id": "friend_of_the_forest",
+    "name": "Friend of the Forest",
+    "description": "Reach maximum reputation with 5 NPCs",
+    "type": "social",
+    "requirement": {"max_reputation": 5},
+    "points": 60,
+    "hidden": false
+  },
+  "savior": {
+    "id": "savior",
+    "name": "Savior of the Woods",
+    "description": "Complete the main questline",
+    "type": "story",
+    "requirement": {"quest": "find_way_out"},
+    "points": 200,
+    "hidden": false
+  },
+  "scholar": {
+    "id": "scholar",
+    "name": "Scholar",
+    "description": "Read all lore entries",
+    "type": "lore",
+    "requirement": {"lore_entries": "all"},
+    "points": 50,
+    "hidden": false
+  },
+  "companion_collector": {
+    "id": "companion_collector",
+    "name": "Companion Collector",
+    "description": "Recruit all possible companions",
+    "type": "social",
+    "requirement": {"companions_recruited": "all"},
+    "points": 100,
+    "hidden": false
+  },
+  "speed_runner": {
+    "id": "speed_runner",
+    "name": "Speed Runner",
+    "description": "Complete the game in under 2 hours",
+    "type": "challenge",
+    "requirement": {"completion_time": 7200},
+    "points": 150,
+    "hidden": true
+  },
+  "pacifist": {
+    "id": "pacifist",
+    "name": "Pacifist",
+    "description": "Complete the game without killing any non-hostile creatures",
+    "type": "challenge",
+    "requirement": {"unnecessary_kills": 0},
+    "points": 100,
+    "hidden": true
+  },
+  "dragon_slayer": {
+    "id": "dragon_slayer",
+    "name": "Dragon Slayer",
+    "description": "Defeat the Ancient Forest Dragon",
+    "type": "combat",
+    "requirement": {"creature": "ancient_dragon"},
+    "points": 150,
+    "hidden": true
+  },
+  "darkness_vanquished": {
+    "id": "darkness_vanquished",
+    "name": "Darkness Vanquished",
+    "description": "Defeat The Whisperer",
+    "type": "story",
+    "requirement": {"creature": "the_whisperer"},
+    "points": 200,
+    "hidden": false
+  },
+  "master_alchemist": {
+    "id": "master_alchemist",
+    "name": "Master Alchemist",
+    "description": "Craft all alchemical recipes",
+    "type": "crafting",
+    "requirement": {"recipes": "alchemy_all"},
+    "points": 75,
+    "hidden": false
+  },
+  "legendary_smith": {
+    "id": "legendary_smith",
+    "name": "Legendary Smith",
+    "description": "Forge a legendary weapon",
+    "type": "crafting",
+    "requirement": {"item": "legendary_sword"},
+    "points": 100,
+    "hidden": false
+  },
+  "wealthy": {
+    "id": "wealthy",
+    "name": "Wealthy Adventurer",
+    "description": "Accumulate 50,000 gold",
+    "type": "wealth",
+    "requirement": {"gold_total": 50000},
+    "points": 100,
+    "hidden": true
+  },
+  "quest_master": {
+    "id": "quest_master",
+    "name": "Quest Master",
+    "description": "Complete all side quests",
+    "type": "completion",
+    "requirement": {"side_quests": "all"},
+    "points": 150,
+    "hidden": false
+  },
+  "survivor": {
+    "id": "survivor",
+    "name": "Survivor",
+    "description": "Survive 100 combat encounters",
+    "type": "combat",
+    "requirement": {"combats_survived": 100},
+    "points": 50,
+    "hidden": false
+  }
+}

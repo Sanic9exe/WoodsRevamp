@@ -1,0 +1,566 @@
+{
+  "find_way_out": {
+    "id": "find_way_out",
+    "name": "Escape the Whispering Woods",
+    "type": "main",
+    "description": "Find a way to escape the mysterious forest.",
+    "objectives": [
+      "Explore the forest and gather information",
+      "Find the source of the corruption",
+      "Defeat The Whisperer",
+      "Escape through the portal"
+    ],
+    "rewards": {
+      "xp": 1000,
+      "gold": 500,
+      "items": ["legendary_item"]
+    },
+    "stages": [
+      "begin_journey",
+      "discover_corruption",
+      "gather_allies",
+      "final_confrontation"
+    ]
+  },
+  "merchant_delivery": {
+    "id": "merchant_delivery",
+    "name": "Merchant's Delivery",
+    "type": "side",
+    "giver": "merchant_aiden",
+    "description": "Deliver a package to the innkeeper at the Weary Traveler.",
+    "objectives": [
+      "Take the package from Aiden",
+      "Travel to the Weary Traveler Inn",
+      "Deliver the package to Iris"
+    ],
+    "rewards": {
+      "xp": 50,
+      "gold": 100,
+      "reputation": {"merchant_aiden": 10}
+    },
+    "difficulty": "easy"
+  },
+  "find_rare_herb": {
+    "id": "find_rare_herb",
+    "name": "Rare Herb Collection",
+    "type": "side",
+    "giver": "merchant_aiden",
+    "description": "Find 5 rare healing herbs for the merchant.",
+    "objectives": [
+      "Find 5 rare healing herbs",
+      "Return to Aiden"
+    ],
+    "required_items": {
+      "rare_herb": 5
+    },
+    "rewards": {
+      "xp": 75,
+      "gold": 150,
+      "items": ["health_potion", "health_potion"],
+      "reputation": {"merchant_aiden": 15}
+    },
+    "difficulty": "medium"
+  },
+  "beast_hunt": {
+    "id": "beast_hunt",
+    "name": "Beast Hunt",
+    "type": "combat",
+    "giver": "guard_bella",
+    "description": "Hunt down the dire wolf that's been terrorizing travelers.",
+    "objectives": [
+      "Track the dire wolf to its lair",
+      "Defeat the dire wolf",
+      "Return to Bella with proof"
+    ],
+    "required_kills": {
+      "dire_wolf": 1
+    },
+    "required_items": {
+      "dire_wolf_pelt": 1
+    },
+    "rewards": {
+      "xp": 150,
+      "gold": 200,
+      "items": ["steel_sword"],
+      "reputation": {"guard_bella": 20}
+    },
+    "difficulty": "hard"
+  },
+  "tower_defense": {
+    "id": "tower_defense",
+    "name": "Defend the Tower",
+    "type": "combat",
+    "giver": "guard_bella",
+    "description": "Help Bella defend the old tower from a monster attack.",
+    "objectives": [
+      "Prepare defenses",
+      "Survive 3 waves of enemies",
+      "Defeat the boss monster"
+    ],
+    "rewards": {
+      "xp": 200,
+      "gold": 300,
+      "items": ["chainmail", "shield"],
+      "reputation": {"guard_bella": 30}
+    },
+    "difficulty": "hard",
+    "timed": true
+  },
+  "ancient_ritual": {
+    "id": "ancient_ritual",
+    "name": "The Ancient Ritual",
+    "type": "main",
+    "giver": "hermit_cedric",
+    "description": "Perform an ancient ritual to seal away the darkness.",
+    "objectives": [
+      "Gather ritual components",
+      "Learn the ancient words",
+      "Perform the ritual at the sacred grove",
+      "Defeat the summoned guardian"
+    ],
+    "required_items": {
+      "sacred_herb": 3,
+      "moonstone": 1,
+      "ancient_scroll": 1
+    },
+    "rewards": {
+      "xp": 300,
+      "gold": 400,
+      "items": ["mystical_charm"],
+      "unlock": "sacred_grove",
+      "reputation": {"hermit_cedric": 50}
+    },
+    "difficulty": "very_hard"
+  },
+  "gather_ore": {
+    "id": "gather_ore",
+    "name": "Ore Collection",
+    "type": "gathering",
+    "giver": "blacksmith_diana",
+    "description": "Collect rare ores from the old mine for Diana's forge.",
+    "objectives": [
+      "Mine 10 iron ore",
+      "Mine 3 silver ore",
+      "Return to Diana"
+    ],
+    "required_items": {
+      "iron_ore": 10,
+      "silver_ore": 3
+    },
+    "rewards": {
+      "xp": 100,
+      "gold": 150,
+      "items": ["iron_sword"],
+      "reputation": {"blacksmith_diana": 20}
+    },
+    "difficulty": "medium"
+  },
+  "forge_legendary_weapon": {
+    "id": "forge_legendary_weapon",
+    "name": "Forge a Legend",
+    "type": "crafting",
+    "giver": "blacksmith_diana",
+    "description": "Help Diana forge a legendary weapon.",
+    "objectives": [
+      "Gather dragon scales",
+      "Find ancient metal",
+      "Obtain a magic crystal",
+      "Craft the legendary sword"
+    ],
+    "required_items": {
+      "dragon_scale": 2,
+      "ancient_metal": 3,
+      "magic_crystal": 1
+    },
+    "rewards": {
+      "xp": 500,
+      "gold": 1000,
+      "items": ["legendary_sword"],
+      "reputation": {"blacksmith_diana": 100}
+    },
+    "difficulty": "legendary",
+    "unlock_recipe": "legendary_sword"
+  },
+  "gather_healing_herbs": {
+    "id": "gather_healing_herbs",
+    "name": "Herb Gathering",
+    "type": "gathering",
+    "giver": "healer_elena",
+    "description": "Gather medicinal herbs for Elena's remedies.",
+    "objectives": [
+      "Gather 10 healing herbs",
+      "Return to Elena"
+    ],
+    "required_items": {
+      "herb": 10
+    },
+    "rewards": {
+      "xp": 50,
+      "gold": 75,
+      "items": ["healing_salve", "healing_salve"],
+      "reputation": {"healer_elena": 15}
+    },
+    "difficulty": "easy",
+    "repeatable": true
+  },
+  "cure_disease": {
+    "id": "cure_disease",
+    "name": "The Plague",
+    "type": "main",
+    "giver": "healer_elena",
+    "description": "Find a cure for the mysterious disease affecting the village.",
+    "objectives": [
+      "Research the disease",
+      "Find rare ingredients",
+      "Brew the cure",
+      "Distribute to villagers"
+    ],
+    "required_items": {
+      "rare_herb": 5,
+      "mushroom": 10,
+      "pure_water": 3
+    },
+    "rewards": {
+      "xp": 250,
+      "gold": 500,
+      "reputation": {"healer_elena": 50, "village": 30}
+    },
+    "difficulty": "hard"
+  },
+  "hunt_shadowwolf": {
+    "id": "hunt_shadowwolf",
+    "name": "The Shadow Wolf",
+    "type": "combat",
+    "giver": "hunter_finn",
+    "description": "Track and hunt the legendary shadow wolf.",
+    "objectives": [
+      "Find shadow wolf tracks",
+      "Track it to its den",
+      "Defeat the shadow wolf"
+    ],
+    "required_kills": {
+      "shadow_wolf": 1
+    },
+    "rewards": {
+      "xp": 200,
+      "gold": 300,
+      "items": ["shadow_pelt", "wolf_fang_necklace"],
+      "reputation": {"hunter_finn": 40}
+    },
+    "difficulty": "very_hard"
+  },
+  "decode_tablets": {
+    "id": "decode_tablets",
+    "name": "Ancient Mysteries",
+    "type": "puzzle",
+    "giver": "scholar_garrett",
+    "description": "Help decode the ancient tablets found in the ruins.",
+    "objectives": [
+      "Find 3 inscribed tablets",
+      "Find the translation key",
+      "Decode the message",
+      "Report findings to Garrett"
+    ],
+    "required_items": {
+      "inscribed_tablet": 3,
+      "translation_key": 1
+    },
+    "rewards": {
+      "xp": 150,
+      "gold": 200,
+      "items": ["ancient_knowledge_book"],
+      "unlock": "ancient_chamber",
+      "reputation": {"scholar_garrett": 30}
+    },
+    "difficulty": "medium"
+  },
+  "steal_heirloom": {
+    "id": "steal_heirloom",
+    "name": "The Stolen Heirloom",
+    "type": "stealth",
+    "giver": "thief_hana",
+    "description": "Steal back a family heirloom from a corrupt noble.",
+    "objectives": [
+      "Scout the manor",
+      "Infiltrate at night",
+      "Steal the heirloom",
+      "Escape without being caught"
+    ],
+    "rewards": {
+      "xp": 175,
+      "gold": 250,
+      "items": ["lockpick", "smoke_bomb"],
+      "reputation": {"thief_hana": 35}
+    },
+    "difficulty": "hard",
+    "stealth_required": true
+  },
+  "deliver_supplies": {
+    "id": "deliver_supplies",
+    "name": "Supply Run",
+    "type": "side",
+    "giver": "innkeeper_iris",
+    "description": "Deliver supplies to the ranger outpost.",
+    "objectives": [
+      "Take supplies from Iris",
+      "Travel to ranger outpost",
+      "Deliver to Jack"
+    ],
+    "rewards": {
+      "xp": 60,
+      "gold": 80,
+      "items": ["food"],
+      "reputation": {"innkeeper_iris": 10, "ranger_jack": 10}
+    },
+    "difficulty": "easy"
+  },
+  "patrol_borders": {
+    "id": "patrol_borders",
+    "name": "Border Patrol",
+    "type": "combat",
+    "giver": "ranger_jack",
+    "description": "Patrol the forest borders and clear out monsters.",
+    "objectives": [
+      "Patrol northern border",
+      "Patrol eastern border",
+      "Defeat any hostile creatures",
+      "Report back to Jack"
+    ],
+    "required_kills": {
+      "any_monster": 10
+    },
+    "rewards": {
+      "xp": 120,
+      "gold": 150,
+      "items": ["arrows"],
+      "reputation": {"ranger_jack": 25}
+    },
+    "difficulty": "medium",
+    "repeatable": true
+  },
+  "gather_ingredients": {
+    "id": "gather_ingredients",
+    "name": "Witch's Brew",
+    "type": "gathering",
+    "giver": "witch_kira",
+    "description": "Gather rare ingredients for Kira's dark ritual.",
+    "objectives": [
+      "Find nightshade",
+      "Capture shadow essence",
+      "Collect moonlit water"
+    ],
+    "required_items": {
+      "nightshade": 3,
+      "shadow_essence": 1,
+      "moonlit_water": 1
+    },
+    "rewards": {
+      "xp": 130,
+      "gold": 180,
+      "items": ["dark_potion"],
+      "reputation": {"witch_kira": 20}
+    },
+    "difficulty": "medium",
+    "moral_choice": "dark"
+  },
+  "slay_undead": {
+    "id": "slay_undead",
+    "name": "Cleanse the Graveyard",
+    "type": "combat",
+    "giver": "knight_leon",
+    "description": "Destroy the undead plaguing the old graveyard.",
+    "objectives": [
+      "Defeat 10 skeletons",
+      "Defeat 5 zombies",
+      "Destroy the necromancer",
+      "Purify the graveyard"
+    ],
+    "required_kills": {
+      "skeleton_warrior": 10,
+      "zombie": 5,
+      "necromancer": 1
+    },
+    "rewards": {
+      "xp": 250,
+      "gold": 300,
+      "items": ["blessed_weapon", "holy_water"],
+      "reputation": {"knight_leon": 40}
+    },
+    "difficulty": "hard",
+    "moral_choice": "good"
+  },
+  "retrieve_spell_book": {
+    "id": "retrieve_spell_book",
+    "name": "The Lost Grimoire",
+    "type": "exploration",
+    "giver": "mage_theron",
+    "description": "Retrieve Theron's spell book from the ruins.",
+    "objectives": [
+      "Travel to the ancient ruins",
+      "Find the hidden library",
+      "Retrieve the grimoire",
+      "Return to Theron"
+    ],
+    "rewards": {
+      "xp": 180,
+      "gold": 220,
+      "items": ["spell_scroll", "magic_ring"],
+      "unlock": "magic_training",
+      "reputation": {"mage_theron": 30}
+    },
+    "difficulty": "medium"
+  },
+  "defend_sacred_tree": {
+    "id": "defend_sacred_tree",
+    "name": "Defend the Sacred Tree",
+    "type": "combat",
+    "giver": "ranger_aria",
+    "description": "Protect the sacred tree from corruption.",
+    "objectives": [
+      "Reach the sacred tree",
+      "Defeat waves of corrupted creatures",
+      "Purify the corruption",
+      "Speak with the tree spirit"
+    ],
+    "rewards": {
+      "xp": 220,
+      "gold": 280,
+      "items": ["nature_blessing", "elven_bow"],
+      "unlock_companion": "ranger_aria",
+      "reputation": {"ranger_aria": 50}
+    },
+    "difficulty": "hard"
+  },
+  "win_drinking_contest": {
+    "id": "win_drinking_contest",
+    "name": "Drinking Contest",
+    "type": "minigame",
+    "giver": "brawler_grog",
+    "description": "Prove your worth by outdrinking Grog.",
+    "objectives": [
+      "Enter the drinking contest",
+      "Drink more than Grog",
+      "Stay conscious"
+    ],
+    "rewards": {
+      "xp": 80,
+      "gold": 100,
+      "items": ["dwarven_ale"],
+      "unlock_companion": "brawler_grog",
+      "reputation": {"brawler_grog": 30}
+    },
+    "difficulty": "medium"
+  },
+  "restore_balance": {
+    "id": "restore_balance",
+    "name": "Restore Natural Balance",
+    "type": "main",
+    "giver": "druid_oak",
+    "description": "Restore the natural balance to the corrupted forest.",
+    "objectives": [
+      "Cleanse 5 corrupted groves",
+      "Plant 3 sacred seeds",
+      "Awaken the forest guardians",
+      "Defeat the corruption source"
+    ],
+    "required_items": {
+      "sacred_seed": 3,
+      "purification_water": 5
+    },
+    "rewards": {
+      "xp": 400,
+      "gold": 500,
+      "items": ["druid_staff", "nature_blessing"],
+      "reputation": {"druid_oak": 100}
+    },
+    "difficulty": "very_hard"
+  },
+  "map_region": {
+    "id": "map_region",
+    "name": "Cartography Mission",
+    "type": "exploration",
+    "giver": "explorer_petra",
+    "description": "Help Petra map unexplored regions of the forest.",
+    "objectives": [
+      "Explore 10 new locations",
+      "Mark landmarks",
+      "Return with complete data"
+    ],
+    "rewards": {
+      "xp": 150,
+      "gold": 200,
+      "items": ["detailed_map", "compass"],
+      "reputation": {"explorer_petra": 25}
+    },
+    "difficulty": "medium"
+  },
+  "rebuild_chapel": {
+    "id": "rebuild_chapel",
+    "name": "Rebuild the Chapel",
+    "type": "construction",
+    "giver": "priest_quinn",
+    "description": "Help Father Quinn rebuild the ruined chapel.",
+    "objectives": [
+      "Gather 20 wood",
+      "Gather 30 stone",
+      "Find sacred artifacts",
+      "Bless the grounds"
+    ],
+    "required_items": {
+      "wood": 20,
+      "stone": 30,
+      "holy_relic": 1
+    },
+    "rewards": {
+      "xp": 200,
+      "gold": 300,
+      "items": ["holy_symbol", "blessing"],
+      "unlock": "chapel_services",
+      "reputation": {"priest_quinn": 40}
+    },
+    "difficulty": "medium"
+  },
+  "acquire_rare_item": {
+    "id": "acquire_rare_item",
+    "name": "The Collector",
+    "type": "side",
+    "giver": "merchant_rose",
+    "description": "Find a rare artifact for Rose's collection.",
+    "objectives": [
+      "Find the ancient artifact",
+      "Return to Rose"
+    ],
+    "required_items": {
+      "ancient_artifact": 1
+    },
+    "rewards": {
+      "xp": 120,
+      "gold": 500,
+      "items": ["exotic_item"],
+      "reputation": {"merchant_rose": 30}
+    },
+    "difficulty": "hard"
+  },
+  "mine_ore": {
+    "id": "mine_ore",
+    "name": "Deep Mining",
+    "type": "gathering",
+    "giver": "miner_sam",
+    "description": "Mine deep in the tunnels for rare ore.",
+    "objectives": [
+      "Explore deep tunnels",
+      "Mine glowing crystals",
+      "Return safely"
+    ],
+    "required_items": {
+      "glowing_crystal": 3
+    },
+    "rewards": {
+      "xp": 140,
+      "gold": 180,
+      "items": ["pickaxe", "gems"],
+      "reputation": {"miner_sam": 25}
+    },
+    "difficulty": "medium"
+  }
+}
