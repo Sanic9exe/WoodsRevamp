@@ -5,6 +5,8 @@ I can create separate files/folders with code all inside of a Whispering_Woods_M
 
 
 ==Must Completes==
+!NOTICE!  : I am giving you no line requirement for this, but remember quality over quantity, it should genuinely be a great text based adventure game.
+
 1. First of all, no need for 300+ NPCS. Aim for 25 or more, all unique.
 
 2. No need for so many locations, there should be a lot. But nothing outrageous.
