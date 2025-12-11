@@ -68,6 +68,8 @@ def press_enter_to_continue():
 
 def format_stat_bar(current: int, maximum: int, length: int = 20, filled_char: str = "█", empty_char: str = "░") -> str:
     """Create a visual stat bar."""
+    if maximum <= 0:
+        return empty_char * length
     filled = int((current / maximum) * length)
     empty = length - filled
     return f"{filled_char * filled}{empty_char * empty}"

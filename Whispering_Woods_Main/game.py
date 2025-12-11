@@ -64,7 +64,7 @@ class Game:
             instant_print(f"  Items: {len(self.game_data['items'])}")
             instant_print(f"  Creatures: {len(self.game_data['creatures'])}")
             instant_print(f"  Locations: {len(self.game_data['locations'])}")
-            instant_print(f"  Companions: {len(self.game_data.get('companions', {}))} ")
+            instant_print(f"  Companions: {len(self.game_data.get('companions', {}))}")
             instant_print(f"  Quests: {len(self.game_data['quests'])}")
             instant_print(f"  Crafting Recipes: {len(self.game_data['crafting'])}")
             instant_print(f"  Achievements: {len(self.game_data['achievements'])}")
@@ -341,8 +341,12 @@ Your goal: Find your way out before the forest claims you forever.
         instant_print(colored_text("\n⚠ You encounter something!", Colors.RED))
         time.sleep(1)
         
-        # Simple placeholder - would implement full combat system
-        instant_print(colored_text("A wild creature appears! (Combat system not fully implemented yet)", 
+        # TODO: Implement full combat system with:
+        # - Turn-based combat mechanics
+        # - Companion participation
+        # - Status effects
+        # - Loot drops
+        instant_print(colored_text("A wild creature appears! (Combat system framework in place)", 
                                    Colors.YELLOW))
         press_enter_to_continue()
     

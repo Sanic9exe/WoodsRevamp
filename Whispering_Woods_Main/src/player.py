@@ -2,8 +2,12 @@
 Player character module
 """
 
+import random
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field
+
+# Combat constants
+DEFENSE_MITIGATION_FACTOR = 2  # How much defense reduces damage
 
 
 @dataclass
@@ -107,8 +111,6 @@ class Player:
     
     def get_attack_damage(self, item_data: Dict = None) -> Tuple[int, str]:
         """Calculate player's attack damage."""
-        import random
-        
         base_damage = 5
         weapon_damage = 0
         damage_type = "physical"
@@ -159,7 +161,7 @@ class Player:
             return 0
         
         defense = self.get_defense()
-        actual_damage = max(1, amount - defense // 2)
+        actual_damage = max(1, amount - defense // DEFENSE_MITIGATION_FACTOR)
         self.stats.health -= actual_damage
         self.total_damage_taken += actual_damage
         self.current_combo = 0
