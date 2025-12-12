@@ -81,6 +81,23 @@ class Player:
         # Crafting and recipes
         self.known_recipes: List[str] = ["torch", "health_potion"]
         
+        # Magic and spells
+        self.known_spells: List[str] = []  # Spell IDs
+        self.spell_schools: Dict[str, int] = {  # School proficiency levels
+            'destruction': 0,
+            'frost': 0,
+            'storm': 0,
+            'restoration': 0,
+            'protection': 0,
+            'arcane': 0,
+            'illusion': 0,
+            'summoning': 0,
+            'necromancy': 0,
+            'divine': 0,
+            'chronomancy': 0
+        }
+        self.favorite_spells: List[str] = []  # Quick-cast spell IDs
+        
         # Status effects (effect_name: remaining_turns)
         self.status_effects: Dict[str, int] = {}
         
@@ -413,5 +430,64 @@ class Player:
         player.achievements = data.get('achievements', [])
         player.lore_discovered = data.get('lore_discovered', [])
         player.status_effects = data.get('status_effects', {})
+        player.known_spells = data.get('known_spells', [])
+        player.spell_schools = data.get('spell_schools', {})
+        player.favorite_spells = data.get('favorite_spells', [])
         
         return player
+    
+    def learn_spell(self, spell_id: str) -> bool:
+        """Learn a new spell."""
+        if spell_id not in self.known_spells:
+            self.known_spells.append(spell_id)
+            return True
+        return False
+    
+    def can_cast_spell(self, spell_data: Dict, spell_schools: Dict = None) -> Tuple[bool, str]:
+        """Check if player can cast a spell."""
+        if spell_schools is None:
+            spell_schools = self.spell_schools
+        
+        # Check level
+        if self.progress.level < spell_data.get('level_required', 1):
+            return False, f"Requires level {spell_data['level_required']}"
+        
+        # Check mana
+        mana_cost = spell_data.get('mana_cost', 0)
+        if self.stats.mana < mana_cost:
+            return False, f"Not enough mana (need {mana_cost}, have {self.stats.mana})"
+        
+        # Check requirements
+        requirements = spell_data.get('requirements', {})
+        for stat, value in requirements.items():
+            if stat == 'intelligence':
+                if self.skills.get('magic', 1) * 10 < value:
+                    return False, f"Requires intelligence {value}"
+            elif stat == 'wisdom':
+                if self.skills.get('magic', 1) * 10 < value:
+                    return False, f"Requires wisdom {value}"
+            else:
+                # Check spell school proficiency
+                if spell_schools.get(stat, 0) < value:
+                    return False, f"Requires {stat} skill level {value}"
+        
+        return True, "Can cast"
+    
+    def cast_spell(self, spell_data: Dict) -> bool:
+        """Cast a spell, consuming mana."""
+        mana_cost = spell_data.get('mana_cost', 0)
+        if self.stats.mana >= mana_cost:
+            self.stats.mana -= mana_cost
+            return True
+        return False
+    
+    def restore_mana(self, amount: int) -> int:
+        """Restore mana and return actual amount restored."""
+        restored = min(amount, self.stats.max_mana - self.stats.mana)
+        self.stats.mana += restored
+        return restored
+    
+    def improve_spell_school(self, school: str, amount: int = 1):
+        """Increase proficiency in a spell school."""
+        if school in self.spell_schools:
+            self.spell_schools[school] += amount
