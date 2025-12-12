@@ -29,6 +29,12 @@ from typing import Dict, List, Optional
 from src.colors import Colors, colored_text
 from src.data_loader import DataLoader
 from src.player import Player
+from src.settings import SETTINGS, GAME_TITLE
+from src.admin_panel import AdminPanel
+from src.game_systems import (
+    TimeWeatherSystem, CombatSystem, CraftingSystem,
+    QuestSystem, AchievementSystem, SaveLoadSystem
+)
 from src.utils import (
     slow_type, instant_print, clear_screen, get_input, get_number_input,
     press_enter_to_continue, format_health_bar, format_list_numbered,
@@ -49,7 +55,14 @@ class Game:
         self.player: Optional[Player] = None
         self.game_data: Dict = {}
         self.running = True
-        self.god_mode = False
+        self.time_weather = TimeWeatherSystem()
+        
+        # Initialize game systems
+        self.combat_system = CombatSystem()
+        self.crafting_system = CraftingSystem()
+        self.quest_system = QuestSystem()
+        self.achievement_system = AchievementSystem()
+        self.save_load_system = SaveLoadSystem()
         
     def load_game_data(self):
         """Load all game data from JSON files."""
@@ -66,8 +79,10 @@ class Game:
             instant_print(f"  Locations: {len(self.game_data['locations'])}")
             instant_print(f"  Companions: {len(self.game_data.get('companions', {}))}")
             instant_print(f"  Quests: {len(self.game_data['quests'])}")
+            instant_print(f"  Spells: {len(self.game_data.get('spells', {}))}")
             instant_print(f"  Crafting Recipes: {len(self.game_data['crafting'])}")
             instant_print(f"  Achievements: {len(self.game_data['achievements'])}")
+            instant_print(f"  Status Effects: {len(self.game_data.get('status_effects', {}))}")
             instant_print(f"  Lore Entries: {len(self.game_data['lore'])}")
             
         except Exception as e:
@@ -93,11 +108,13 @@ class Game:
             instant_print(colored_text("\nMAIN MENU", Colors.BOLD_YELLOW))
             instant_print(colored_text("\n1. New Game", Colors.GREEN))
             instant_print(colored_text("2. Load Game", Colors.CYAN))
-            instant_print(colored_text("3. Instructions", Colors.YELLOW))
-            instant_print(colored_text("4. Credits", Colors.MAGENTA))
-            instant_print(colored_text("5. Exit", Colors.RED))
+            instant_print(colored_text("3. Options", Colors.BLUE))
+            instant_print(colored_text("4. Instructions", Colors.YELLOW))
+            instant_print(colored_text("5. Credits", Colors.MAGENTA))
+            instant_print(colored_text("6. Admin Panel", Colors.RED))
+            instant_print(colored_text("7. Exit", Colors.RED))
             
-            choice = get_number_input("\nSelect an option (1-5): ", 1, 5)
+            choice = get_number_input("\nSelect an option (1-7): ", 1, 7)
             
             if choice == 1:
                 self.new_game()
@@ -106,10 +123,14 @@ class Game:
                 if self.load_game():
                     break
             elif choice == 3:
-                self.show_instructions()
+                self.show_options_menu()
             elif choice == 4:
-                self.show_credits()
+                self.show_instructions()
             elif choice == 5:
+                self.show_credits()
+            elif choice == 6:
+                AdminPanel.show_menu(self.player, self.game_data, self.time_weather)
+            elif choice == 7:
                 instant_print(colored_text("\nThanks for playing!", Colors.CYAN))
                 sys.exit(0)
     
@@ -613,6 +634,77 @@ Your goal: Find your way out before the forest claims you forever.
         instant_print("  quit       - Exit the game")
         
         press_enter_to_continue()
+    
+    def show_options_menu(self):
+        """Display options/settings menu."""
+        while True:
+            clear_screen()
+            instant_print(colored_text("╔══════════════════════════════════════════════╗", Colors.BOLD_BLUE))
+            instant_print(colored_text("║            ⚙ OPTIONS & SETTINGS ⚙            ║", Colors.BOLD_BLUE))
+            instant_print(colored_text("╚══════════════════════════════════════════════╝", Colors.BOLD_BLUE))
+            
+            instant_print(colored_text("\n=== DISPLAY SETTINGS ===", Colors.YELLOW))
+            instant_print(f"1. Text Speed: {SETTINGS.text_speed:.2f}s")
+            instant_print(f"2. Colors: {'Enabled' if SETTINGS.enable_colors else 'Disabled'}")
+            
+            instant_print(colored_text("\n=== GAMEPLAY SETTINGS ===", Colors.YELLOW))
+            instant_print(f"3. Difficulty: {SETTINGS.difficulty.upper()}")
+            instant_print(f"4. Auto-Save: {'ON' if SETTINGS.auto_save else 'OFF'}")
+            instant_print(f"5. Show Hints: {'ON' if SETTINGS.show_hints else 'OFF'}")
+            instant_print(f"6. Confirm Actions: {'ON' if SETTINGS.confirm_actions else 'OFF'}")
+            
+            instant_print(colored_text("\n=== OTHER ===", Colors.YELLOW))
+            instant_print("7. Reset to Defaults")
+            instant_print(colored_text("0. Back to Main Menu", Colors.CYAN))
+            
+            choice = get_input("\nSelect option: ")
+            
+            if choice == "0":
+                break
+            elif choice == "1":
+                instant_print("\nText Speed Options:")
+                instant_print("1. Very Fast (0.01s)")
+                instant_print("2. Fast (0.02s)")
+                instant_print("3. Normal (0.03s)")
+                instant_print("4. Slow (0.05s)")
+                instant_print("5. Very Slow (0.08s)")
+                speed_choice = get_number_input("Select speed: ", 1, 5)
+                if speed_choice:
+                    speeds = [0.01, 0.02, 0.03, 0.05, 0.08]
+                    SETTINGS.text_speed = speeds[speed_choice - 1]
+                    instant_print(colored_text(f"Text speed set to {SETTINGS.text_speed:.2f}s", Colors.GREEN))
+                    press_enter_to_continue()
+            elif choice == "2":
+                SETTINGS.enable_colors = not SETTINGS.enable_colors
+                instant_print(colored_text(f"Colors {'enabled' if SETTINGS.enable_colors else 'disabled'}", Colors.GREEN))
+                press_enter_to_continue()
+            elif choice == "3":
+                instant_print("\nDifficulty Options:")
+                instant_print("1. Easy")
+                instant_print("2. Normal")
+                instant_print("3. Hard")
+                diff_choice = get_number_input("Select difficulty: ", 1, 3)
+                if diff_choice:
+                    difficulties = ["easy", "normal", "hard"]
+                    SETTINGS.difficulty = difficulties[diff_choice - 1]
+                    instant_print(colored_text(f"Difficulty set to {SETTINGS.difficulty.upper()}", Colors.GREEN))
+                    press_enter_to_continue()
+            elif choice == "4":
+                SETTINGS.auto_save = not SETTINGS.auto_save
+                instant_print(colored_text(f"Auto-save {'enabled' if SETTINGS.auto_save else 'disabled'}", Colors.GREEN))
+                press_enter_to_continue()
+            elif choice == "5":
+                SETTINGS.show_hints = not SETTINGS.show_hints
+                instant_print(colored_text(f"Hints {'enabled' if SETTINGS.show_hints else 'disabled'}", Colors.GREEN))
+                press_enter_to_continue()
+            elif choice == "6":
+                SETTINGS.confirm_actions = not SETTINGS.confirm_actions
+                instant_print(colored_text(f"Action confirmation {'enabled' if SETTINGS.confirm_actions else 'disabled'}", Colors.GREEN))
+                press_enter_to_continue()
+            elif choice == "7":
+                SETTINGS.reset_to_defaults()
+                instant_print(colored_text("Settings reset to defaults", Colors.GREEN))
+                press_enter_to_continue()
     
     def show_instructions(self):
         """Show game instructions."""

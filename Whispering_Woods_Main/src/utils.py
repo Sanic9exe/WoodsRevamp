@@ -112,17 +112,10 @@ def confirm_choice(prompt: str = "Are you sure?") -> bool:
 
 def display_title():
     """Display the game title."""
-    title = """
-╔═══════════════════════════════════════════════════════════╗
-║                                                           ║
-║        LOST IN THE WHISPERING WOODS                       ║
-║        A Text-Based Adventure Game                        ║
-║                                                           ║
-║        Version 2.0 - Revamped Edition                     ║
-║                                                           ║
-╚═══════════════════════════════════════════════════════════╝
-    """
-    instant_print(colored_text(title, Colors.BOLD_CYAN))
+    from .settings import GAME_TITLE
+    # Use slow_type for the title for dramatic effect
+    for line in GAME_TITLE.split('\n'):
+        instant_print(colored_text(line, Colors.BOLD_GREEN))
 
 
 def display_separator(char: str = "=", length: int = 60, color: str = Colors.CYAN):
