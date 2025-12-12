@@ -88,6 +88,14 @@ class DataLoader:
         """Load companion data from companions.json."""
         return self.load_json("companions.json")
     
+    def load_spells(self) -> Dict[str, Any]:
+        """Load spell data from spells.json."""
+        return self.load_json("spells.json")
+    
+    def load_status_effects(self) -> Dict[str, Any]:
+        """Load status effects from status_effects.json."""
+        return self.load_json("status_effects.json")
+    
     def load_all(self) -> Dict[str, Dict[str, Any]]:
         """Load all game data at once."""
         return {
@@ -100,5 +108,7 @@ class DataLoader:
             'crafting': self.load_crafting_recipes(),
             'achievements': self.load_achievements(),
             'events': self.load_events(),
-            'lore': self.load_lore()
+            'lore': self.load_lore(),
+            'spells': self.load_spells(),
+            'status_effects': self.load_status_effects()
         }
