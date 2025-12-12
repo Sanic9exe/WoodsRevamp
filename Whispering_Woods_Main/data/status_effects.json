@@ -1,0 +1,266 @@
+{
+  "poisoned": {
+    "id": "poisoned",
+    "name": "Poisoned",
+    "type": "damage_over_time",
+    "description": "Taking poison damage each turn.",
+    "duration": 5,
+    "tick_damage": 3,
+    "tick_heal": 0,
+    "icon": "☠",
+    "stat_modifiers": {
+      "strength": -2,
+      "defense": -1
+    }
+  },
+  "bleeding": {
+    "id": "bleeding",
+    "name": "Bleeding",
+    "type": "damage_over_time",
+    "description": "Losing blood, taking damage each turn.",
+    "duration": 4,
+    "tick_damage": 5,
+    "tick_heal": 0,
+    "icon": "🩸",
+    "stat_modifiers": {
+      "strength": -3
+    }
+  },
+  "burning": {
+    "id": "burning",
+    "name": "Burning",
+    "type": "damage_over_time",
+    "description": "On fire! Taking fire damage.",
+    "duration": 3,
+    "tick_damage": 8,
+    "tick_heal": 0,
+    "icon": "🔥",
+    "stat_modifiers": {}
+  },
+  "frozen": {
+    "id": "frozen",
+    "name": "Frozen",
+    "type": "control",
+    "description": "Encased in ice, cannot move or act.",
+    "duration": 2,
+    "tick_damage": 2,
+    "tick_heal": 0,
+    "icon": "❄",
+    "stat_modifiers": {
+      "speed": -100
+    }
+  },
+  "stunned": {
+    "id": "stunned",
+    "name": "Stunned",
+    "type": "control",
+    "description": "Dazed and unable to act.",
+    "duration": 1,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "💫",
+    "stat_modifiers": {}
+  },
+  "blessed": {
+    "id": "blessed",
+    "name": "Blessed",
+    "type": "buff",
+    "description": "Blessed by divine power, increased stats.",
+    "duration": 10,
+    "tick_damage": 0,
+    "tick_heal": 2,
+    "icon": "✨",
+    "stat_modifiers": {
+      "strength": 5,
+      "defense": 5,
+      "wisdom": 5
+    }
+  },
+  "regenerating": {
+    "id": "regenerating",
+    "name": "Regenerating",
+    "type": "heal_over_time",
+    "description": "Rapidly healing wounds over time.",
+    "duration": 6,
+    "tick_damage": 0,
+    "tick_heal": 5,
+    "icon": "💚",
+    "stat_modifiers": {}
+  },
+  "haste": {
+    "id": "haste",
+    "name": "Haste",
+    "type": "buff",
+    "description": "Moving and acting with supernatural speed.",
+    "duration": 5,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "⚡",
+    "stat_modifiers": {
+      "speed": 50,
+      "evasion": 10
+    }
+  },
+  "slowed": {
+    "id": "slowed",
+    "name": "Slowed",
+    "type": "debuff",
+    "description": "Movement and actions slowed significantly.",
+    "duration": 4,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "🐌",
+    "stat_modifiers": {
+      "speed": -30,
+      "evasion": -5
+    }
+  },
+  "weakened": {
+    "id": "weakened",
+    "name": "Weakened",
+    "type": "debuff",
+    "description": "Physical strength greatly reduced.",
+    "duration": 5,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "💔",
+    "stat_modifiers": {
+      "strength": -10,
+      "defense": -5
+    }
+  },
+  "empowered": {
+    "id": "empowered",
+    "name": "Empowered",
+    "type": "buff",
+    "description": "Surging with magical power.",
+    "duration": 5,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "⚡",
+    "stat_modifiers": {
+      "intelligence": 10,
+      "magic_damage": 20
+    }
+  },
+  "invisible": {
+    "id": "invisible",
+    "name": "Invisible",
+    "type": "buff",
+    "description": "Cannot be seen by enemies.",
+    "duration": 3,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "👻",
+    "stat_modifiers": {
+      "stealth": 100,
+      "evasion": 50
+    }
+  },
+  "silenced": {
+    "id": "silenced",
+    "name": "Silenced",
+    "type": "debuff",
+    "description": "Cannot cast spells or use abilities.",
+    "duration": 3,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "🤐",
+    "stat_modifiers": {}
+  },
+  "confused": {
+    "id": "confused",
+    "name": "Confused",
+    "type": "control",
+    "description": "Disoriented, may attack allies or self.",
+    "duration": 2,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "😵",
+    "stat_modifiers": {
+      "accuracy": -50
+    }
+  },
+  "feared": {
+    "id": "feared",
+    "name": "Feared",
+    "type": "control",
+    "description": "Overcome with terror, fleeing in panic.",
+    "duration": 3,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "😱",
+    "stat_modifiers": {
+      "courage": -100
+    }
+  },
+  "charmed": {
+    "id": "charmed",
+    "name": "Charmed",
+    "type": "control",
+    "description": "Under enemy control, fighting for them.",
+    "duration": 3,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "💝",
+    "stat_modifiers": {}
+  },
+  "protected": {
+    "id": "protected",
+    "name": "Protected",
+    "type": "buff",
+    "description": "Shielded by magical barriers.",
+    "duration": 5,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "🛡",
+    "stat_modifiers": {
+      "defense": 15,
+      "magic_resistance": 20
+    }
+  },
+  "cursed": {
+    "id": "cursed",
+    "name": "Cursed",
+    "type": "debuff",
+    "description": "Afflicted by dark magic, all stats reduced.",
+    "duration": 10,
+    "tick_damage": 2,
+    "tick_heal": 0,
+    "icon": "🌑",
+    "stat_modifiers": {
+      "strength": -5,
+      "defense": -5,
+      "intelligence": -5,
+      "luck": -10
+    }
+  },
+  "berserk": {
+    "id": "berserk",
+    "name": "Berserk",
+    "type": "buff",
+    "description": "Filled with rage, increased damage but reduced defense.",
+    "duration": 4,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "😤",
+    "stat_modifiers": {
+      "strength": 15,
+      "defense": -10,
+      "critical_chance": 20
+    }
+  },
+  "paralyzed": {
+    "id": "paralyzed",
+    "name": "Paralyzed",
+    "type": "control",
+    "description": "Completely unable to move or act.",
+    "duration": 2,
+    "tick_damage": 0,
+    "tick_heal": 0,
+    "icon": "⚡",
+    "stat_modifiers": {
+      "evasion": -100
+    }
+  }
+}
