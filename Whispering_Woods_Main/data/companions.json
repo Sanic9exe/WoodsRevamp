@@ -1,0 +1,501 @@
+{
+  "wolf_shadowfang": {
+    "id": "wolf_shadowfang",
+    "name": "Shadowfang",
+    "type": "Beast Companion",
+    "species": "Wolf",
+    "description": "A massive black wolf with intelligent amber eyes and a loyal heart.",
+    "recruitment_location": "wolf_den",
+    "recruitment_quest": "earn_wolf_trust",
+    "combat_stats": {
+      "health": 80,
+      "attack": 20,
+      "defense": 12,
+      "speed": 18
+    },
+    "special_abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "Increases party damage by 15% when in combat",
+        "effect": {"party_damage_bonus": 0.15}
+      },
+      {
+        "name": "Night Vision",
+        "description": "Can see perfectly in darkness, reduces danger in dark areas",
+        "effect": {"dark_penalty_reduction": 0.5}
+      },
+      {
+        "name": "Tracking",
+        "description": "Can track creatures and find hidden paths",
+        "effect": {"reveal_secrets": true}
+      }
+    ],
+    "personality": "Fierce but loyal. Will protect the player with their life.",
+    "dialogue": [
+      "*growls protectively*",
+      "*sniffs the air and looks alert*",
+      "*nuzzles your hand affectionately*",
+      "*howls at the moon*"
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "backstory": "Shadowfang was once the alpha of a wolf pack until hunters killed most of their family. Now alone, they seek a new pack to protect."
+  },
+  "fairy_lumina": {
+    "id": "fairy_lumina",
+    "name": "Lumina",
+    "type": "Magical Companion",
+    "species": "Forest Fairy",
+    "description": "A tiny glowing fairy with gossamer wings and a mischievous smile.",
+    "recruitment_location": "fairy_circle",
+    "recruitment_quest": "save_fairy_grove",
+    "combat_stats": {
+      "health": 30,
+      "attack": 8,
+      "defense": 5,
+      "speed": 25,
+      "magic": 30
+    },
+    "special_abilities": [
+      {
+        "name": "Healing Light",
+        "description": "Automatically heals party members for 10 HP per turn",
+        "effect": {"heal_per_turn": 10}
+      },
+      {
+        "name": "Illumination",
+        "description": "Provides light in dark areas without needing a torch",
+        "effect": {"permanent_light": true}
+      },
+      {
+        "name": "Fairy Dust",
+        "description": "Can put weak enemies to sleep",
+        "effect": {"sleep_chance": 0.3}
+      },
+      {
+        "name": "Nature's Blessing",
+        "description": "Increases luck for finding rare items",
+        "effect": {"luck_bonus": 15}
+      }
+    ],
+    "personality": "Playful and curious, but fiercely protective of nature and friends.",
+    "dialogue": [
+      "Ooh, what's that? Let me see!",
+      "The trees are whispering about danger ahead...",
+      "I can make things sparkle! Watch this!",
+      "Stay close, I'll keep you safe with my magic!",
+      "These woods are my home. I know all their secrets!"
+    ],
+    "loyalty_system": true,
+    "can_die": false,
+    "backstory": "Lumina is one of the last remaining forest fairies. Most of her kind have fled or faded as the darkness spreads through the woods. She joins you hoping to restore balance to her home."
+  },
+  "golem_granite": {
+    "id": "golem_granite",
+    "name": "Granite",
+    "type": "Construct Companion",
+    "species": "Stone Golem",
+    "description": "A towering construct of ancient stone, animated by forgotten magic.",
+    "recruitment_location": "ancient_ruins",
+    "recruitment_quest": "reactivate_golem",
+    "combat_stats": {
+      "health": 150,
+      "attack": 30,
+      "defense": 35,
+      "speed": 5
+    },
+    "special_abilities": [
+      {
+        "name": "Stone Skin",
+        "description": "Takes 50% less damage from physical attacks",
+        "effect": {"physical_resistance": 0.5}
+      },
+      {
+        "name": "Earthquake Stomp",
+        "description": "Powerful AoE attack that hits all enemies",
+        "effect": {"aoe_damage": 25}
+      },
+      {
+        "name": "Guardian",
+        "description": "Can take hits intended for the player",
+        "effect": {"intercept_damage": true}
+      },
+      {
+        "name": "Immovable",
+        "description": "Cannot be knocked back or stunned",
+        "effect": {"status_immunity": ["stun", "knockback"]}
+      }
+    ],
+    "personality": "Silent and stoic. Communicates through gestures and rumbling sounds.",
+    "dialogue": [
+      "*rumbles deeply*",
+      "*places a protective stone hand on your shoulder*",
+      "*pounds fist against chest in salute*",
+      "*grinding stone sounds*"
+    ],
+    "loyalty_system": false,
+    "can_die": false,
+    "backstory": "Granite was built centuries ago to guard ancient ruins. After being reactivated, it bonds with the player and becomes their steadfast protector."
+  },
+  "rogue_lyra": {
+    "id": "rogue_lyra",
+    "name": "Lyra Swift",
+    "type": "Human Companion",
+    "species": "Human",
+    "description": "A skilled rogue with quick reflexes and a mysterious past.",
+    "recruitment_location": "thieves_den",
+    "recruitment_quest": "help_lyra_escape",
+    "combat_stats": {
+      "health": 70,
+      "attack": 22,
+      "defense": 10,
+      "speed": 22,
+      "stealth": 25
+    },
+    "special_abilities": [
+      {
+        "name": "Backstab",
+        "description": "Critical hit chance increased by 40%",
+        "effect": {"crit_chance": 0.4}
+      },
+      {
+        "name": "Lockpicking Expert",
+        "description": "Can open any lock, no lockpicks needed",
+        "effect": {"free_lockpicking": true}
+      },
+      {
+        "name": "Shadow Step",
+        "description": "Can escape any non-boss combat encounter",
+        "effect": {"guaranteed_escape": true}
+      },
+      {
+        "name": "Treasure Hunter",
+        "description": "Finds extra gold in chests and enemies",
+        "effect": {"gold_multiplier": 1.5}
+      }
+    ],
+    "personality": "Witty and sarcastic, but deeply loyal to those who earn her trust.",
+    "dialogue": [
+      "I could pick that lock in my sleep. Watch and learn.",
+      "Trust me, I've gotten out of worse situations than this.",
+      "You've got decent instincts. For an amateur.",
+      "The guild would kill me if they knew I was helping you. Let's keep this between us.",
+      "I've got your back. Just don't expect me to play by the rules."
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "friendship_levels": {
+      "stranger": 0,
+      "acquaintance": 20,
+      "friend": 50,
+      "trusted": 80,
+      "best_friend": 100
+    },
+    "romance_option": true,
+    "backstory": "Lyra was betrayed by her thieves' guild and left for dead. She's looking for redemption and revenge. Her skills are invaluable, but her trust must be earned."
+  },
+  "knight_marcus": {
+    "id": "knight_marcus",
+    "name": "Sir Marcus Lightbringer",
+    "type": "Human Companion",
+    "species": "Human",
+    "description": "A noble paladin knight seeking to cleanse the woods of evil.",
+    "recruitment_location": "old_keep",
+    "recruitment_quest": "prove_your_honor",
+    "combat_stats": {
+      "health": 120,
+      "attack": 28,
+      "defense": 25,
+      "speed": 12,
+      "holy_power": 20
+    },
+    "special_abilities": [
+      {
+        "name": "Divine Strike",
+        "description": "Deals extra damage to undead and demonic enemies",
+        "effect": {"holy_damage_bonus": 50}
+      },
+      {
+        "name": "Shield of Faith",
+        "description": "Reduces damage taken by entire party by 20%",
+        "effect": {"party_defense": 0.2}
+      },
+      {
+        "name": "Lay on Hands",
+        "description": "Can heal party members once per battle",
+        "effect": {"combat_heal": 40}
+      },
+      {
+        "name": "Fearless",
+        "description": "Immune to fear and intimidation effects",
+        "effect": {"fear_immunity": true}
+      }
+    ],
+    "personality": "Honorable and righteous, but can be inflexible about rules and morality.",
+    "dialogue": [
+      "Evil shall not prevail while I still draw breath!",
+      "Your actions speak of honor. I am proud to fight beside you.",
+      "The darkness grows stronger, but so does our resolve.",
+      "We must help those in need. It is our sacred duty.",
+      "Sometimes the hardest battles are fought within our own hearts."
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "moral_alignment": "lawful_good",
+    "conflicts_with": ["rogue_lyra", "witch_salem"],
+    "backstory": "Marcus is the last knight of a fallen order. He's sworn to destroy the evil that corrupted his kingdom, believing its source lies in the Whispering Woods."
+  },
+  "mage_theron": {
+    "id": "mage_theron",
+    "name": "Theron the Arcane",
+    "type": "Human Companion",
+    "species": "Human",
+    "description": "An elderly wizard with vast magical knowledge and mysterious motives.",
+    "recruitment_location": "wizard_tower",
+    "recruitment_quest": "retrieve_spell_book",
+    "combat_stats": {
+      "health": 50,
+      "attack": 35,
+      "defense": 8,
+      "speed": 10,
+      "magic": 40
+    },
+    "special_abilities": [
+      {
+        "name": "Fireball",
+        "description": "Powerful AoE magic attack",
+        "effect": {"magic_aoe": 30}
+      },
+      {
+        "name": "Arcane Shield",
+        "description": "Creates a magical barrier that absorbs damage",
+        "effect": {"absorb_damage": 50}
+      },
+      {
+        "name": "Identify",
+        "description": "Can reveal the properties of magical items",
+        "effect": {"item_identification": true}
+      },
+      {
+        "name": "Teleport",
+        "description": "Can teleport party to previously visited locations",
+        "effect": {"fast_travel": true}
+      }
+    ],
+    "personality": "Wise and cryptic, often speaks in riddles. Hides dark secrets.",
+    "dialogue": [
+      "The arcane flows through all things. You need only learn to see it.",
+      "I have studied magic for seventy years. Still, there is so much I don't understand.",
+      "This forest... it's more magical than anywhere I've ever been.",
+      "Be careful what you wish for. Magic always has a price.",
+      "I sense great power within you. Untapped, but powerful nonetheless."
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "teaches_magic": true,
+    "backstory": "Theron came to the woods seeking forbidden knowledge. He's found something that both terrifies and fascinates him. His true intentions remain unclear."
+  },
+  "ranger_aria": {
+    "id": "ranger_aria",
+    "name": "Aria Windwhisper",
+    "type": "Elf Companion",
+    "species": "Wood Elf",
+    "description": "An elven ranger who moves through the forest like a ghost.",
+    "recruitment_location": "elven_grove",
+    "recruitment_quest": "defend_sacred_tree",
+    "combat_stats": {
+      "health": 85,
+      "attack": 24,
+      "defense": 15,
+      "speed": 20,
+      "archery": 30
+    },
+    "special_abilities": [
+      {
+        "name": "Sure Shot",
+        "description": "Ranged attacks never miss",
+        "effect": {"perfect_accuracy": true}
+      },
+      {
+        "name": "Nature's Path",
+        "description": "Party moves faster through forest terrain",
+        "effect": {"movement_speed": 1.5}
+      },
+      {
+        "name": "Animal Friend",
+        "description": "Can communicate with and calm wild animals",
+        "effect": {"animal_communication": true}
+      },
+      {
+        "name": "Camouflage",
+        "description": "Party is harder to detect, avoiding some encounters",
+        "effect": {"encounter_reduction": 0.3}
+      }
+    ],
+    "personality": "Calm and graceful, deeply connected to nature. Distrusts outsiders initially.",
+    "dialogue": [
+      "The forest sings to me. Can you hear it?",
+      "You walk heavily. Let me teach you to move like the wind.",
+      "My people have protected these woods for millennia. Now, I protect them alone.",
+      "The trees remember everything. They tell me stories of ages past.",
+      "In time, you may learn to see the world as we elves do."
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "romance_option": true,
+    "long_lifespan": true,
+    "backstory": "Aria is one of the last wood elves in the Whispering Woods. Her people have mostly left, but she remains as guardian of the sacred groves."
+  },
+  "brawler_grog": {
+    "id": "brawler_grog",
+    "name": "Grog Ironjaw",
+    "type": "Dwarf Companion",
+    "species": "Dwarf",
+    "description": "A boisterous dwarf who prefers fists to weapons and ale to water.",
+    "recruitment_location": "mining_camp",
+    "recruitment_quest": "win_drinking_contest",
+    "combat_stats": {
+      "health": 110,
+      "attack": 26,
+      "defense": 22,
+      "speed": 8
+    },
+    "special_abilities": [
+      {
+        "name": "Berserk",
+        "description": "Damage increases as health decreases",
+        "effect": {"berserk_mode": true}
+      },
+      {
+        "name": "Iron Stomach",
+        "description": "Immune to poison and disease",
+        "effect": {"poison_immunity": true, "disease_immunity": true}
+      },
+      {
+        "name": "Mining Expertise",
+        "description": "Finds rare ores and gems when mining",
+        "effect": {"mining_bonus": 2.0}
+      },
+      {
+        "name": "Dwarven Resilience",
+        "description": "Regenerates health slowly during combat",
+        "effect": {"health_regen": 5}
+      }
+    ],
+    "personality": "Loud, jovial, and always ready for a fight or a drink. Fiercely loyal.",
+    "dialogue": [
+      "Ha! That's barely a scratch! Come on, hit me harder!",
+      "I once drank seventeen pints and fought a bear. Good times!",
+      "These woods are alright, but I miss the mountains.",
+      "You're not bad for a surfacer! Maybe I'll teach you to fight proper!",
+      "Ale, gold, and a good brawl - that's all a dwarf needs!"
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "drinking_buddy": true,
+    "backstory": "Grog left his mountain clan to seek adventure and fortune. He's found both in the Whispering Woods, along with more trouble than even he bargained for."
+  },
+  "necromancer_salem": {
+    "id": "necromancer_salem",
+    "name": "Salem Darkwhisper",
+    "type": "Dark Mage Companion",
+    "species": "Human",
+    "description": "A mysterious necromancer shrouded in dark robes, commanding the undead.",
+    "recruitment_location": "graveyard",
+    "recruitment_quest": "accept_dark_pact",
+    "combat_stats": {
+      "health": 60,
+      "attack": 32,
+      "defense": 10,
+      "speed": 12,
+      "dark_magic": 38
+    },
+    "special_abilities": [
+      {
+        "name": "Raise Undead",
+        "description": "Summons skeleton warriors to fight for the party",
+        "effect": {"summon_minions": 2}
+      },
+      {
+        "name": "Life Drain",
+        "description": "Steals health from enemies and gives to party",
+        "effect": {"vampiric": 0.3}
+      },
+      {
+        "name": "Death's Touch",
+        "description": "Instantly kills weak enemies",
+        "effect": {"instant_kill_chance": 0.25}
+      },
+      {
+        "name": "Speak with Dead",
+        "description": "Can gather information from corpses and spirits",
+        "effect": {"spirit_communication": true}
+      }
+    ],
+    "personality": "Cold and calculating, but not necessarily evil. Views death as a tool.",
+    "dialogue": [
+      "Death is not the end. It's merely a transformation.",
+      "The dead have much to teach us, if we're willing to listen.",
+      "Your fear of necromancy is irrational. It's just another school of magic.",
+      "I can sense the life force of everything around us. Fascinating.",
+      "Some call me evil. I call myself practical."
+    ],
+    "loyalty_system": true,
+    "can_die": true,
+    "moral_alignment": "neutral_evil",
+    "conflicts_with": ["knight_marcus", "priest_quinn"],
+    "corruption_risk": true,
+    "backstory": "Salem was once a healer who turned to necromancy after failing to save their loved ones. Now they seek to master death itself, regardless of the moral cost."
+  },
+  "assassin_shadow": {
+    "id": "assassin_shadow",
+    "name": "Shadow",
+    "type": "Mysterious Companion",
+    "species": "Unknown",
+    "description": "A figure wrapped in darkness, identity unknown, speaking only in whispers.",
+    "recruitment_location": "shadow_realm",
+    "recruitment_quest": "embrace_darkness",
+    "combat_stats": {
+      "health": 75,
+      "attack": 35,
+      "defense": 12,
+      "speed": 28,
+      "stealth": 40
+    },
+    "special_abilities": [
+      {
+        "name": "Assassinate",
+        "description": "Guaranteed critical hit on first strike of combat",
+        "effect": {"first_strike_crit": true}
+      },
+      {
+        "name": "Vanish",
+        "description": "Becomes invisible, avoiding all attacks for one turn",
+        "effect": {"invisibility": true}
+      },
+      {
+        "name": "Shadow Walk",
+        "description": "Can move through walls and locked doors",
+        "effect": {"phase_through": true}
+      },
+      {
+        "name": "Death Mark",
+        "description": "Marks an enemy for death, dealing massive damage over time",
+        "effect": {"dot_damage": 20}
+      }
+    ],
+    "personality": "Silent and enigmatic. Communicates through actions more than words.",
+    "dialogue": [
+      "...",
+      "*gestures to move forward*",
+      "*whispers* Death comes for all...",
+      "*nods silently*",
+      "*disappears into shadows*"
+    ],
+    "loyalty_system": true,
+    "can_die": false,
+    "mysterious_origin": true,
+    "true_identity_revealed": "late_game",
+    "backstory": "No one knows who or what Shadow truly is. They appeared from the darkness and offered their services. Their true motives remain a mystery."
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "merchant_aiden": {
+    "id": "merchant_aiden",
+    "name": "Aiden the Wanderer",
+    "profession": "Traveling Merchant",
+    "description": "A weathered merchant with kind eyes and an impressive collection of goods strapped to his pack.",
+    "location": "clearing",
+    "dialogue": [
+      "Ah, a fellow traveler! Lost in these woods, are we?",
+      "I've been trading these paths for twenty years. The forest changes, but the trade routes remain.",
+      "Looking for something specific? I might have it - for the right price.",
+      "The woods grow more dangerous each year. Best stick to the marked paths.",
+      "I once met a wizard who claimed these woods were enchanted. Can't say I disbelieve him anymore."
+    ],
+    "quests": ["merchant_delivery", "find_rare_herb"],
+    "sells": ["health_potion", "rope", "torch", "dried_food", "basic_weapon"],
+    "buys": ["herbs", "pelts", "gems", "ancient_artifacts"],
+    "personality": "friendly",
+    "age": 45,
+    "backstory": "Aiden has traveled the Whispering Woods for decades, establishing himself as a reliable trader. He knows the forest better than most and has survived encounters that would have killed lesser men."
+  },
+  "guard_bella": {
+    "id": "guard_bella",
+    "name": "Bella Ironshield",
+    "profession": "Forest Warden",
+    "description": "A stern woman in worn leather armor, bearing the marks of countless battles.",
+    "location": "old_tower",
+    "dialogue": [
+      "State your business, traveler. These woods are under my protection.",
+      "I've hunted beasts in this forest you couldn't imagine in your nightmares.",
+      "If you're looking for trouble, you've come to the wrong person. If you're looking for help... maybe we can talk.",
+      "The ancient evil stirs. I can feel it in my bones.",
+      "My oath binds me to these woods. I'll defend them until my last breath."
+    ],
+    "quests": ["beast_hunt", "tower_defense"],
+    "sells": ["steel_sword", "chainmail", "shield"],
+    "buys": ["monster_parts", "weapons", "armor"],
+    "personality": "stern",
+    "age": 38,
+    "backstory": "Bella took an oath to protect the Whispering Woods after her village was destroyed by dark creatures. She has made it her life's mission to hunt down evil and protect innocent travelers."
+  },
+  "hermit_cedric": {
+    "id": "hermit_cedric",
+    "name": "Old Man Cedric",
+    "profession": "Hermit & Lorekeeper",
+    "description": "An ancient man with a long white beard and eyes that seem to see through time itself.",
+    "location": "hermit_hut",
+    "dialogue": [
+      "Welcome, young one. I have been expecting you.",
+      "These woods remember. They remember everything that has happened within them.",
+      "Long ago, before your kind walked these lands, something terrible was buried here.",
+      "The trees speak to those who know how to listen. Would you like me to teach you?",
+      "Time moves differently in the Whispering Woods. Hours can become days, days can become moments."
+    ],
+    "quests": ["ancient_ritual", "collect_mushrooms", "tree_whisperer"],
+    "sells": ["ancient_map", "mystical_charm", "herbal_remedy"],
+    "buys": ["rare_herbs", "mushrooms", "ancient_texts"],
+    "personality": "mysterious",
+    "age": 87,
+    "backstory": "Cedric has lived in the Whispering Woods longer than anyone can remember. Some say he's immortal, others that he's a ghost. He possesses knowledge of the forest's deepest secrets."
+  },
+  "blacksmith_diana": {
+    "id": "blacksmith_diana",
+    "name": "Diana Flameheart",
+    "profession": "Master Blacksmith",
+    "description": "A muscular woman with soot-stained hands and a forge hammer at her belt.",
+    "location": "abandoned_forge",
+    "dialogue": [
+      "You want quality work? You've come to the right place.",
+      "I can forge anything, given the right materials. The question is, can you afford it?",
+      "My family has been smithing for generations. These woods provide unique ores you won't find anywhere else.",
+      "Bring me rare metals, and I'll craft you weapons worthy of legend.",
+      "The forge fire never truly goes out. It's been burning here for a hundred years."
+    ],
+    "quests": ["gather_ore", "forge_legendary_weapon", "repair_ancient_blade"],
+    "sells": ["steel_sword", "iron_armor", "tools", "horseshoes"],
+    "buys": ["ore", "gems", "scrap_metal", "coal"],
+    "personality": "proud",
+    "age": 42,
+    "backstory": "Diana inherited the ancient forge from her father, who inherited it from his father before him. She's the finest smith in the region and knows secrets of metalwork lost to the outside world."
+  },
+  "healer_elena": {
+    "id": "healer_elena",
+    "name": "Elena Moonwhisper",
+    "profession": "Herbalist & Healer",
+    "description": "A gentle woman with flowers woven into her hair and the scent of healing herbs about her.",
+    "location": "healing_grove",
+    "dialogue": [
+      "Come, let me tend to your wounds. The forest provides all the medicine we need.",
+      "Every plant here has a purpose. Some heal, some harm. The wise know the difference.",
+      "I sense pain in you. Not just of the body, but of the spirit.",
+      "The moon guides my work. Its cycles dictate when each herb has the most power.",
+      "I'll help anyone who asks, but my services aren't free. The forest requires balance."
+    ],
+    "quests": ["gather_healing_herbs", "cure_disease", "moon_ritual"],
+    "sells": ["health_potion", "antidote", "healing_salve", "bandages"],
+    "buys": ["rare_flowers", "mushrooms", "animal_parts"],
+    "personality": "compassionate",
+    "age": 34,
+    "backstory": "Elena was born with a natural gift for healing. She can communicate with plants and sense the properties of any herb. She dedicated her life to helping those who venture into the dangerous woods."
+  },
+  "hunter_finn": {
+    "id": "hunter_finn",
+    "name": "Finn the Tracker",
+    "profession": "Master Hunter",
+    "description": "A lithe man dressed in furs, moving with the grace of the predators he hunts.",
+    "location": "hunting_grounds",
+    "dialogue": [
+      "Quiet now. You'll scare away the game.",
+      "I can track anything through these woods. Man or beast, nothing escapes me.",
+      "The forest provides for those who respect it. Take only what you need.",
+      "See these tracks? Three-toed print, deep claw marks. Shadow wolf, and it's hunting.",
+      "I've been tracking a legendary beast for years. One day, I'll have its pelt."
+    ],
+    "quests": ["hunt_shadowwolf", "gather_pelts", "track_beast"],
+    "sells": ["bow", "arrows", "trap", "pelt", "dried_meat"],
+    "buys": ["arrows", "hunting_gear", "monster_parts"],
+    "personality": "stoic",
+    "age": 36,
+    "backstory": "Finn grew up in the woods, learning to hunt from his father. He can track any creature and knows the behavioral patterns of every beast in the forest. His skills are unmatched."
+  },
+  "scholar_garrett": {
+    "id": "scholar_garrett",
+    "name": "Professor Garrett Vale",
+    "profession": "Archaeologist",
+    "description": "A disheveled academic with ink-stained fingers and several ancient books under his arm.",
+    "location": "ancient_ruins",
+    "dialogue": [
+      "Fascinating! These ruins predate any known civilization in this region.",
+      "I'm on the verge of a breakthrough. The markings suggest a complex written language.",
+      "According to my research, something of immense power was sealed beneath these woods.",
+      "The locals think I'm mad, but I know the truth is hidden in these stones.",
+      "Would you be interested in helping with my excavation? I can pay well... eventually."
+    ],
+    "quests": ["decode_tablets", "find_artifacts", "explore_tomb"],
+    "sells": ["ancient_map", "translation_guide", "research_notes"],
+    "buys": ["artifacts", "old_books", "inscribed_stones"],
+    "personality": "eccentric",
+    "age": 52,
+    "backstory": "Professor Vale has dedicated his life to uncovering the secrets of the Whispering Woods' ancient past. His theories are dismissed by his peers, but he's convinced something monumental lies hidden here."
+  },
+  "thief_hana": {
+    "id": "thief_hana",
+    "name": "Hana Shadowstep",
+    "profession": "Rogue",
+    "description": "A mysterious woman who seems to appear and disappear like smoke.",
+    "location": "thieves_den",
+    "dialogue": [
+      "You didn't see me, and I didn't see you. Understood?",
+      "For the right price, I can get you anything. No questions asked.",
+      "The guard thinks these woods are safe. They're wrong. My guild controls everything.",
+      "I might have some... items... that fell off the back of a cart. Interested?",
+      "Lock picking, trap disarming, silent entry - all part of my repertoire."
+    ],
+    "quests": ["steal_heirloom", "break_into_tower", "assassin_contract"],
+    "sells": ["lockpick", "poison", "smoke_bomb", "daggers"],
+    "buys": ["gems", "jewelry", "rare_items"],
+    "personality": "cunning",
+    "age": 29,
+    "backstory": "Hana leads a small thieves' guild operating in the shadows of the Whispering Woods. She's clever, ruthless, and always two steps ahead of the law."
+  },
+  "innkeeper_iris": {
+    "id": "innkeeper_iris",
+    "name": "Iris Warmhearth",
+    "profession": "Innkeeper",
+    "description": "A plump, cheerful woman who always has a warm smile and a hot meal ready.",
+    "location": "forest_inn",
+    "dialogue": [
+      "Welcome, dear! Come in, come in! You look exhausted.",
+      "We don't get many travelers these days. The woods have gotten too dangerous.",
+      "I've got hot stew, fresh bread, and clean beds. What more could a weary traveler want?",
+      "My late husband built this inn. I've kept it running in his memory.",
+      "You hear all sorts of stories from travelers. Some I believe, some I don't."
+    ],
+    "quests": ["deliver_supplies", "find_husband", "pest_control"],
+    "sells": ["food", "room", "local_info"],
+    "buys": ["food_ingredients", "firewood"],
+    "personality": "warm",
+    "age": 55,
+    "backstory": "Iris runs the only inn in the Whispering Woods. She provides a safe haven for travelers and knows everyone's business. Her inn is neutral ground where even enemies sit at peace."
+  },
+  "ranger_jack": {
+    "id": "ranger_jack",
+    "name": "Jack Thornwild",
+    "profession": "Ranger",
+    "description": "A rugged man with a hawk perched on his shoulder and a longbow across his back.",
+    "location": "ranger_outpost",
+    "dialogue": [
+      "The woods are restless tonight. Something's coming.",
+      "I patrol these borders, keeping the darkness at bay. It's a thankless job, but someone has to do it.",
+      "My hawk can spot danger from miles away. Trust me, you want her on your side.",
+      "The ancient trees are dying. Something unnatural is poisoning the forest.",
+      "I work alone, usually. But these are unusual times. I might need help."
+    ],
+    "quests": ["patrol_borders", "cure_trees", "train_hawk"],
+    "sells": ["longbow", "arrows", "survival_kit"],
+    "buys": ["monster_parts", "rare_herbs"],
+    "personality": "vigilant",
+    "age": 41,
+    "backstory": "Jack has patrolled the Whispering Woods for fifteen years, protecting its borders from external threats and keeping the monster population in check. He's seen things that would drive others mad."
+  },
+  "witch_kira": {
+    "id": "witch_kira",
+    "name": "Kira the Swamp Witch",
+    "profession": "Witch",
+    "description": "A cloaked figure surrounded by an aura of dark magic and the smell of exotic herbs.",
+    "location": "witch_hut",
+    "dialogue": [
+      "I've been waiting for you. The cards told me you'd come.",
+      "Want to know your future? Or perhaps change it? Everything has a price.",
+      "The villagers fear me, but when they need real power, they come crawling back.",
+      "Dark magic isn't evil. It's just... misunderstood. Like me.",
+      "I can brew potions that will grant your deepest desires. But beware - wishes often turn sour."
+    ],
+    "quests": ["gather_ingredients", "curse_removal", "dark_ritual"],
+    "sells": ["magic_potion", "curse", "spell_scroll", "crystal_ball"],
+    "buys": ["rare_ingredients", "monster_parts", "souls"],
+    "personality": "enigmatic",
+    "age": 156,
+    "backstory": "Kira has lived in the swamp for over a century, practicing dark arts. Some say she made a deal with something ancient and evil. Others say she's just misunderstood. All agree she's powerful."
+  },
+  "knight_leon": {
+    "id": "knight_leon",
+    "name": "Sir Leon the Brave",
+    "profession": "Paladin Knight",
+    "description": "A noble knight in shining armor, bearing the crest of a long-forgotten kingdom.",
+    "location": "old_keep",
+    "dialogue": [
+      "Honor and duty guide my blade.",
+      "I swore an oath to destroy the evil that lurks in these woods. I will not rest until it's done.",
+      "The old kingdom fell to darkness. I am all that remains of its glory.",
+      "Join me, brave adventurer! Together we can cleanse this forest of evil!",
+      "My sword has been blessed by the priests. It strikes true against dark creatures."
+    ],
+    "quests": ["slay_undead", "retrieve_holy_relic", "defeat_dark_lord"],
+    "sells": ["holy_water", "blessed_weapon", "knight_armor"],
+    "buys": ["holy_items", "evil_artifacts_to_destroy"],
+    "personality": "honorable",
+    "age": 44,
+    "backstory": "Sir Leon is the last knight of a fallen kingdom, sworn to destroy the evil that corrupted his homeland. He believes the source of that evil lies somewhere in the Whispering Woods."
+  },
+  "alchemist_mira": {
+    "id": "alchemist_mira",
+    "name": "Mira Goldmix",
+    "profession": "Alchemist",
+    "description": "A young woman whose clothes are splattered with colorful chemical stains.",
+    "location": "alchemy_lab",
+    "dialogue": [
+      "Don't touch anything! Half these vials are explosive.",
+      "The key to alchemy is precise measurements. One drop too much, and boom!",
+      "I can transmute base metals into gold. Well, almost. I'm working on it.",
+      "Want to see something cool? Watch this reaction!",
+      "Science and magic aren't so different when you really think about it."
+    ],
+    "quests": ["gather_reagents", "test_potion", "transmutation_experiment"],
+    "sells": ["explosive", "acid", "transmutation_stone", "experimental_potion"],
+    "buys": ["minerals", "plants", "monster_essence"],
+    "personality": "enthusiastic",
+    "age": 26,
+    "backstory": "Mira is a brilliant but reckless alchemist who set up her lab in the woods after being banned from the city for 'excessive explosions'. She's always one experiment away from a breakthrough or disaster."
+  },
+  "bard_nero": {
+    "id": "bard_nero",
+    "name": "Nero the Minstrel",
+    "profession": "Traveling Bard",
+    "description": "A charismatic performer with a lute and a voice that could charm birds from trees.",
+    "location": "forest_inn",
+    "dialogue": [
+      "Let me tell you a tale of heroes and monsters!",
+      "Music is the universal language. Even the beasts pause to listen.",
+      "I've performed in every court from here to the capital. But these woods... they inspire my best work.",
+      "Want to hear a song? I know ballads of love, war, and everything in between.",
+      "The stories say the trees themselves dance when I play. It's not quite true... but almost."
+    ],
+    "quests": ["compose_ballad", "perform_concert", "find_lost_instrument"],
+    "sells": ["musical_instrument", "song_book", "performance"],
+    "buys": ["stories", "rare_music_sheets"],
+    "personality": "charismatic",
+    "age": 31,
+    "backstory": "Nero travels the realm collecting stories and turning them into songs. He's searching for the perfect tale to compose his masterpiece, and he believes the Whispering Woods holds that story."
+  },
+  "druid_oak": {
+    "id": "druid_oak",
+    "name": "Oakbeard the Ancient",
+    "profession": "Druid",
+    "description": "An old druid whose skin resembles bark and whose hair is like moss.",
+    "location": "sacred_grove",
+    "dialogue": [
+      "The forest speaks to me. It tells me of your coming.",
+      "We druids are the bridge between civilization and nature. We keep the balance.",
+      "These woods are sacred. Ancient magic flows through every root and branch.",
+      "I have lived three lifetimes and will live three more. Time means little to us.",
+      "The natural order must be preserved. Those who upset it face nature's wrath."
+    ],
+    "quests": ["restore_balance", "awaken_treant", "cleanse_corruption"],
+    "sells": ["nature_staff", "seed_of_life", "druid_robe"],
+    "buys": ["natural_items", "pristine_water"],
+    "personality": "wise",
+    "age": 312,
+    "backstory": "Oakbeard has protected the Whispering Woods for centuries. He's more tree than man now, deeply connected to the forest. He can command nature itself and speaks with the voice of the ancient woods."
+  },
+  "explorer_petra": {
+    "id": "explorer_petra",
+    "name": "Petra Wildstride",
+    "profession": "Explorer & Cartographer",
+    "description": "An adventurous woman with maps, compass, and a gleam of wanderlust in her eyes.",
+    "location": "map_room",
+    "dialogue": [
+      "I've mapped three continents, but these woods... they keep changing.",
+      "Every expedition reveals something new. It's like the forest doesn't want to be mapped.",
+      "I've seen things in these woods that defy explanation. Caves that weren't there yesterday, paths that lead nowhere.",
+      "Want to join my expedition? Fair warning: it's dangerous, exhausting, and absolutely thrilling!",
+      "My maps are the most accurate you'll find. I stake my reputation on it."
+    ],
+    "quests": ["map_region", "discover_location", "rescue_expedition"],
+    "sells": ["map", "compass", "rope", "climbing_gear"],
+    "buys": ["exploration_reports", "rare_maps"],
+    "personality": "adventurous",
+    "age": 33,
+    "backstory": "Petra has explored every corner of the known world. The Whispering Woods is her greatest challenge yet - a place that seems to resist being fully mapped and understood."
+  },
+  "priest_quinn": {
+    "id": "priest_quinn",
+    "name": "Father Quinn",
+    "profession": "Traveling Priest",
+    "description": "A humble priest in simple robes, carrying only a holy symbol and his faith.",
+    "location": "chapel_ruins",
+    "dialogue": [
+      "May the light guide you through these dark woods.",
+      "I'm rebuilding this old chapel. It will be a sanctuary for lost souls.",
+      "Faith is more powerful than any magic. Believe, and you shall be saved.",
+      "I've come to drive out the darkness that plagues this forest.",
+      "Even in the deepest shadow, a single candle can bring hope."
+    ],
+    "quests": ["rebuild_chapel", "bless_grounds", "exorcism"],
+    "sells": ["holy_symbol", "prayer_book", "blessing"],
+    "buys": ["religious_items", "offerings"],
+    "personality": "devout",
+    "age": 48,
+    "backstory": "Father Quinn received a divine vision telling him to restore the ancient chapel in the Whispering Woods. He believes it's the key to banishing the evil that corrupts the forest."
+  },
+  "merchant_rose": {
+    "id": "merchant_rose",
+    "name": "Rose Silkpurse",
+    "profession": "Exotic Goods Dealer",
+    "description": "An elegant merchant with rare and unusual items from distant lands.",
+    "location": "trading_post",
+    "dialogue": [
+      "I deal in curiosities and rarities. Things you won't find anywhere else.",
+      "Every item has a story. Would you like to hear it? For a price, of course.",
+      "I source my goods from across the world. Some say from beyond it.",
+      "Quality over quantity, dear. I only stock the finest.",
+      "You look like someone who appreciates the finer things. Am I right?"
+    ],
+    "quests": ["acquire_rare_item", "trade_route_escort", "appraise_artifact"],
+    "sells": ["exotic_weapon", "rare_gem", "luxury_item", "ancient_artifact"],
+    "buys": ["anything_rare", "unique_items"],
+    "personality": "sophisticated",
+    "age": 39,
+    "backstory": "Rose travels the world seeking rare and exotic items to sell. She has connections everywhere and can acquire almost anything for the right price. Her shop is a treasure trove of wonders."
+  },
+  "miner_sam": {
+    "id": "miner_sam",
+    "name": "Sam Rockbreaker",
+    "profession": "Master Miner",
+    "description": "A sturdy dwarf-like man covered in rock dust, with a pickaxe over his shoulder.",
+    "location": "old_mine",
+    "dialogue": [
+      "These tunnels go deep. Deeper than anyone knows.",
+      "I've mined every type of ore in existence. But what's down here... I've never seen anything like it.",
+      "The mountain sings, if you know how to listen. It tells you where to dig.",
+      "Cave-ins, gas pockets, underground rivers - mining is dangerous work. But the rewards are worth it.",
+      "Found something glowing in the deep tunnels. I'm not sure if I should be excited or terrified."
+    ],
+    "quests": ["mine_ore", "clear_cave_in", "find_glowing_crystal"],
+    "sells": ["ore", "gems", "mining_tools", "dynamite"],
+    "buys": ["tools", "food_supplies"],
+    "personality": "hardy",
+    "age": 56,
+    "backstory": "Sam has been mining the mountains around the Whispering Woods for thirty years. He's discovered rare minerals and gems, but recently he's found something that shouldn't exist in these geological formations."
+  },
+  "assassin_thorn": {
+    "id": "assassin_thorn",
+    "name": "Thorn",
+    "profession": "Assassin",
+    "description": "A figure in dark clothing, their face hidden, radiating deadly competence.",
+    "location": "shadow_camp",
+    "dialogue": [
+      "You shouldn't know I'm here. Consider this a courtesy.",
+      "I have one rule: I always complete the contract.",
+      "Death is just business. Nothing personal.",
+      "I can make anyone disappear. Anyone. Remember that.",
+      "The shadows are my home. I am invisible. I am inevitable."
+    ],
+    "quests": ["assassination_contract", "stealth_training", "eliminate_target"],
+    "sells": ["poison", "blade", "shadow_cloak", "assassination_tools"],
+    "buys": ["contracts", "intelligence"],
+    "personality": "cold",
+    "age": 35,
+    "backstory": "Thorn is a legendary assassin who operates from the shadows. Their true identity is unknown, and they've never failed a contract. They're dangerous, efficient, and completely amoral."
+  },
+  "child_uma": {
+    "id": "child_uma",
+    "name": "Uma the Lost",
+    "profession": "Lost Child",
+    "description": "A young girl who seems oddly at home in these dangerous woods.",
+    "location": "abandoned_village",
+    "dialogue": [
+      "Are you lost too? The trees told me someone new was coming.",
+      "I live here now. The forest takes care of me.",
+      "The monsters don't hurt me. I think they're lonely, just like I was.",
+      "Do you have any stories? I collect them.",
+      "Sometimes I see things... things that aren't really there. Or maybe they are?"
+    ],
+    "quests": ["find_parents", "collect_stories", "make_friend"],
+    "sells": ["friendship", "forest_knowledge"],
+    "buys": ["toys", "sweets", "stories"],
+    "personality": "innocent",
+    "age": 9,
+    "backstory": "Uma was lost in the woods years ago. Instead of perishing, she somehow survived and adapted. She seems to have formed a strange connection with the forest itself. Some think she's blessed, others cursed."
+  },
+  "veteran_victor": {
+    "id": "veteran_victor",
+    "name": "Captain Victor Ironheart",
+    "profession": "Retired Soldier",
+    "description": "A scarred veteran with one eye and a lifetime of battle experience.",
+    "location": "military_camp",
+    "dialogue": [
+      "I've fought in every major war for the past twenty years. Thought I'd find peace here. I was wrong.",
+      "These woods are a battlefield. You need to think like a soldier to survive.",
+      "I've seen horrors on the battlefield. But what lurks in these woods... it's something else.",
+      "Discipline, training, and a cool head - that's what keeps you alive.",
+      "I may be retired, but I can still fight. And I will, if I must."
+    ],
+    "quests": ["train_combat", "defend_camp", "rescue_squad"],
+    "sells": ["military_weapons", "armor", "tactics_manual"],
+    "buys": ["weapons", "military_supplies"],
+    "personality": "gruff",
+    "age": 62,
+    "backstory": "Captain Victor retired after losing his eye in battle. He sought peace in the Whispering Woods but found himself drawn into yet another conflict. He trains others in combat and leads defense efforts."
+  },
+  "spirit_willow": {
+    "id": "spirit_willow",
+    "name": "Willow",
+    "profession": "Forest Spirit",
+    "description": "An ethereal being that glows with soft green light, more presence than person.",
+    "location": "spirit_glade",
+    "dialogue": [
+      "I am the forest. The forest is me. We are one.",
+      "You carry darkness within you. Let me help cleanse it.",
+      "The ancient pact is breaking. Soon, chaos will return.",
+      "I have watched these woods for a thousand years. I will watch for a thousand more.",
+      "Some souls become lost forever in these woods. I guide them home."
+    ],
+    "quests": ["restore_pact", "guide_spirits", "purify_corruption"],
+    "sells": ["spirit_essence", "ethereal_blessing", "nature_gift"],
+    "buys": ["pure_offerings", "natural_artifacts"],
+    "personality": "otherworldly",
+    "age": 1000,
+    "backstory": "Willow is a forest spirit, born from the collective consciousness of the Whispering Woods. She's neither fully real nor fully imaginary, existing in a state between. She protects the forest and guides lost souls."
+  },
+  "chef_xavier": {
+    "id": "chef_xavier",
+    "name": "Chef Xavier Flamebite",
+    "profession": "Master Chef",
+    "description": "A portly man with a tall chef's hat and an infectious enthusiasm for food.",
+    "location": "forest_inn",
+    "dialogue": [
+      "The secret to great cooking is passion! And butter. Lots of butter.",
+      "Have you tried my famous mushroom stew? The mushrooms from these woods are extraordinary!",
+      "I'm working on a cookbook: 'Dangerous Delicacies - Cooking with Monster Parts'.",
+      "Every ingredient tells a story. My job is to bring that story to the plate.",
+      "If you find any interesting ingredients, bring them to me! I'll make you something amazing!"
+    ],
+    "quests": ["gather_ingredients", "cook_feast", "recipe_hunt"],
+    "sells": ["prepared_food", "recipe_book", "cooking_utensils"],
+    "buys": ["rare_ingredients", "monster_meat", "exotic_plants"],
+    "personality": "jovial",
+    "age": 47,
+    "backstory": "Xavier was a renowned chef in the capital before retiring to the Whispering Woods. He discovered that the forest's unique flora and fauna create incredible culinary experiences. He's always seeking new ingredients."
+  },
+  "fortune_teller_yuki": {
+    "id": "fortune_teller_yuki",
+    "name": "Madame Yuki",
+    "profession": "Fortune Teller",
+    "description": "A mysterious woman draped in colorful scarves, with knowing eyes that seem to see your soul.",
+    "location": "fortune_tent",
+    "dialogue": [
+      "Cross my palm with silver, and I'll reveal your fate.",
+      "The cards never lie. But sometimes, the truth is not what you want to hear.",
+      "I see... darkness in your future. But also a choice. Everything depends on what you choose.",
+      "Some call me a charlatan. They change their minds when my predictions come true.",
+      "The future is not set in stone. Every action creates ripples that change what's to come."
+    ],
+    "quests": ["find_crystal_ball", "investigate_prophecy", "prevent_disaster"],
+    "sells": ["fortune_telling", "lucky_charm", "tarot_deck"],
+    "buys": ["mystical_items", "payment_for_services"],
+    "personality": "mysterious",
+    "age": 44,
+    "backstory": "Yuki claims to have genuine psychic abilities, though skeptics abound. Whether her powers are real or she's just incredibly perceptive, her predictions have an uncanny habit of coming true."
+  },
+  "engineer_zane": {
+    "id": "engineer_zane",
+    "name": "Zane Gearsmith",
+    "profession": "Inventor & Engineer",
+    "description": "A young man covered in grease, always tinkering with some mechanical contraption.",
+    "location": "workshop",
+    "dialogue": [
+      "I can build anything. Give me enough time and materials, and I'll create miracles!",
+      "Magic is fine, but I prefer good old-fashioned engineering. More reliable.",
+      "I'm working on an automated defense system. Once it's done, these woods will be much safer!",
+      "Every problem has a mechanical solution. You just have to find the right gears.",
+      "Want to see my latest invention? Fair warning - it might explode. That's just part of the process!"
+    ],
+    "quests": ["gather_parts", "test_invention", "repair_mechanism"],
+    "sells": ["mechanical_trap", "tools", "clockwork_device", "blueprints"],
+    "buys": ["scrap_metal", "gears", "springs", "components"],
+    "personality": "inventive",
+    "age": 28,
+    "backstory": "Zane is a brilliant inventor who set up shop in the Whispering Woods to test his creations away from city regulations. His inventions are revolutionary when they work, catastrophic when they don't."
+  }
+}
